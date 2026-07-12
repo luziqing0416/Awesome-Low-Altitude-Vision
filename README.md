@@ -69,6 +69,9 @@ The **Scale** column reports released images, annotated frames, or videos when v
 
 | Dataset | Year | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|
+| **UAVBench + UAVIT-1M (NWPU)** | 2026 | MLLM evaluation and instruction tuning | UAVBench: 966K samples / 43 test units; UAVIT-1M: 1.24M instructions over 789K real images | Image/region classification and captioning, VQA, detection, grounding, and other low-altitude vision-language tasks | [Project](https://uavbench.github.io/) · [Data](https://huggingface.co/datasets/ZhanYang-nwpu/UAVBench) · [Paper](https://arxiv.org/abs/2603.14336) |
+| **SpatialSky-Bench / SpatialSky-Dataset** | 2025 | VLM spatial reasoning and UAV navigation | SpatialSky-Dataset: 1M annotated samples; 13 benchmark subcategories | Environmental perception, distance/height, bounding boxes, landing safety, and scene understanding | [Code/data](https://github.com/linglingxiansen/SpatialSKy) · [Paper](https://arxiv.org/abs/2511.13269) |
+| **MM-UAVBench** | 2025 | MLLM perception, cognition, and planning | 1,549 video clips + 2,873 images; 19 tasks | Object/scene/event understanding and aerial/ground-agent planning | [Code/data](https://github.com/AI9Stars/MM-UAVBench) |
 | **VisDrone** | 2018 | Detection, tracking, crowd counting | 10,209 images; 288 clips / 261,908 frames; 2.6M+ boxes | People and vehicles in urban/rural scenes | [Data](https://github.com/VisDrone/VisDrone-Dataset) · [Paper](https://doi.org/10.1109/TPAMI.2021.3119563) |
 | **UAV123 / UAV20L** | 2016 | SOT | 123 sequences; 110,000+ frames | People, vehicles, boats, other targets | [Project](https://cemse.kaust.edu.sa/ivul/uav123) · [Paper](https://arxiv.org/abs/1605.07109) |
 
@@ -78,6 +81,7 @@ A cross-cutting index: synthetic datasets may also appear under their primary ap
 
 | Dataset | Year | Generation/source | Application | Scale | Intended use | Resources |
 |---|---:|---|---|---|---|---|
+| **UAVBench (UAEU/Khalifa)** | 2025 | LLM-generated structured flight scenarios and MCQs | Agentic UAV reasoning | 50,000 validated JSON scenarios + 50,000 multiple-choice questions | Mission planning, risk, navigation, ethics, resource constraints, and multi-agent reasoning; text/structured data rather than a vision dataset | [Data/code](https://github.com/maferrag/UAVBench) · [Paper](https://arxiv.org/abs/2511.11252) |
 | **C2A** | 2024 | Composited humans + disaster backgrounds | SAR | 10,215 images; 360,000+ instances | Disaster human detection and pose diversity | [Data/code](https://github.com/Ragib-Amin-Nihal/C2A) · [Paper](https://arxiv.org/abs/2408.04922) |
 | **Synthetic SeaDronesSee** | — | Pre-generated maritime synthetic data produced with a generation tool | SAR | — | Downloadable synthetic training data for maritime detection, augmentation, and sim-to-real research | [Official release](https://seadronessee.cs.uni-tuebingen.de/dataset) |
 | **BIRDSAI Synthetic** | 2020 | AirSim-W thermal simulation | Ecology | 124 videos | Thermal detection/tracking and domain adaptation | [Data](https://sites.google.com/view/elizabethbondi/dataset) · [Paper](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
