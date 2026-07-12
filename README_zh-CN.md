@@ -31,6 +31,7 @@
 
 | 数据集 | 年份 | 数据来源 | 任务 | 数据规模 | 主要对象/场景 | 资源 |
 |---|---:|---|---|---|---|---|
+| **LADI** | 2023 | 真实低空有人机/无人机 | 灾害多标签分类 | — | 收集于2015–2023年真实灾害响应中的低空倾斜影像 | [数据](https://registry.opendata.aws/ladi/) · [说明](https://github.com/ladi-dataset/ladi-overview) |
 | **RescueNet** | 2023 | 真实无人机 | 分类、语义分割、视觉问答 | 4,494张图像 | 建筑损毁、道路阻塞、废墟、水域和车辆 | [数据](https://github.com/BinaLab/RescueNet-A-High-Resolution-Post-Disaster-UAV-Dataset-for-Semantic-Segmentation) · [论文](https://www.nature.com/articles/s41597-023-02799-4) |
 | **FloodNet** | 2021 | 真实无人机 | 分类、语义分割、视觉问答 | 2,343张图像 | 受淹与未受淹的道路、建筑等基础设施 | [数据](https://github.com/BinaLab/FloodNet-Supervised_v1.0) · [论文](https://arxiv.org/abs/2105.08655) |
 | **FLAME** | 2021 | 真实无人机 | 分类、分割 | 47,992张标注帧；2,003张分割掩码 | 火灾分类与燃烧区域分割 | [项目](https://github.com/AlirezaShamsoshoara/Fire-目标检测-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle) · [数据](https://doi.org/10.21227/7rk7-ey09) |
@@ -39,20 +40,29 @@
 
 | 数据集 | 年份 | 数据来源 | 任务 | 数据规模 | 主要对象 | 资源 |
 |---|---:|---|---|---|---|---|
+| **InsPLAD** | 2023 | 真实无人机巡检 | 检测、缺陷分类、异常检测 | 10,607张全高清图像；28,933个部件实例 | 17类输电线路部件和6类缺陷 | [项目/数据](https://andreluizbvs.github.io/InsPLAD/) · [代码](https://github.com/andreluizbvs/InsPLAD) · [论文](https://arxiv.org/abs/2311.01619) |
+| **PLD-UAV（PLDU/PLDM）** | 2022 | 真实无人机 | 电力线分割 | 11,210张图像；240,553个线状标注对象 | 城市和山区电力线，提供像素级掩码 | [数据/代码](https://github.com/SnorkerHeng/PLD-UAV) |
 | **PTL-AI Furnas** | 2022 | 真实巡检影像 | 分类、故障识别 | 6,295张图像 | 输电线路部件及故障 | [数据](https://github.com/freds0/PTL-AI_Furnas_Dataset) · [论文](https://ieeexplore.ieee.org/document/9991806) |
+| **STN PLAD** | 2021 | 真实无人机 | 目标检测 | 2,409个标注对象 | 输电塔、绝缘子、间隔棒、标识牌和防振锤 | [数据/代码](https://github.com/andreluizbvs/PLAD) · [论文](https://doi.org/10.1109/SIBGRAPI54419.2021.00037) |
 | **TTPLA** | 2020 | 真实航拍 | 目标检测, semantic/instance segmentation | 1,100张原始4K图像；8,987个标注实例 | 输电塔和电力线 | [数据](https://github.com/r3ab/ttpla_dataset) · [论文](https://openaccess.thecvf.com/content/ACCV2020/html/Abdelfattah_TTPLA_An_Aerial-Image_Dataset_for_目标检测_and_Segmentation_of_Transmission_ACCV_2020_paper.html) |
 
 ### 4. 人员与人群理解
 
 | 数据集 | 年份 | 数据来源 | 任务 | 数据规模 | 主要对象/场景 | 资源 |
 |---|---:|---|---|---|---|---|
+| **HIT-UAV** | 2023 | 真实无人机 | 热红外人员/车辆检测 | 2,898张热红外图像；24,899个实例 | 人员与车辆，并提供高度、视角和昼夜元数据 | [数据/代码](https://github.com/suojiashun/HIT-UAV-Infrared-Thermal-Dataset) |
 | **Manipal UAV Person** | 2023 | 真实无人机 | 目标检测 | 33段视频；13,462张图像；153,112个人体实例 | 不同尺度、姿态、天气和光照条件下的小尺度人员 | [数据](https://github.com/Akshathakrbhat/Manipal-UAV-Person-Dataset) · [论文](https://doi.org/10.1016/j.isprsjprs.2022.11.022) |
+| **UAV-Human** | 2021 | 真实无人机 | 动作识别、姿态、重识别、属性识别 | 67,428段视频；119名参与者 | 不同地点、视角和光照下的多模态人员行为 | [数据/代码](https://github.com/SUTDCV/UAV-Human) · [论文](https://openaccess.thecvf.com/content/CVPR2021/html/Li_UAV-Human_A_Large_Benchmark_for_Human_Behavior_Understanding_With_Unmanned_Aerial_CVPR_2021_paper.html) |
+| **DroneCrowd** | 2020 | 真实无人机 | 人群计数 | 112段视频；33,600帧；480万人头标注 | 不同地点和天气下的密集人群 | [数据/代码](https://github.com/VisDrone/DroneCrowd) |
 | **Okutama-Action** | 2017 | 真实无人机 | 目标检测、动作识别 | 43分钟；12段视频；77,365张标注帧 | 室外场景中的多人并发动作 | [数据](https://okutama-action.org/) · [论文](https://openaccess.thecvf.com/content_cvpr_2017_workshops/w24/html/Barekatain_Okutama-Action_An_Aerial_CVPR_2017_paper.html) |
 
 ### 5. 交通与城市监测
 
 | 数据集 | 年份 | 任务 | 数据规模 | 主要对象/场景 | 资源 |
 |---|---:|---|---|---|---|
+| **MiTra** | 2025 | 检测、跟踪、轨迹分析 | 原始无人机视频及拼接轨迹，详见发布页 | 混合交通与换道行为 | [论文/数据](https://www.nature.com/articles/s41597-025-05472-0) |
+| **DRIFT** | 2025 | 多机位交通分析 | 九个交叉口的同步视频，详见发布页 | 约250米高度采集的路网级交通轨迹 | [论文](https://arxiv.org/abs/2504.11019) |
+| **UTUAV** | 2025 | 车辆检测 | — | 麦德林城市交通，摩托车比例较高 | [论文](https://www.mdpi.com/2504-446X/10/1/15) |
 | **AU-AIR** | 2020 | 目标检测 | 32,823张标注帧；132,034个目标实例 | 城市交通参与者及飞行元数据 | [数据](https://bozcani.github.io/auairdataset) · [论文](https://doi.org/10.1109/ICRA40945.2020.9197293) |
 | **DroneVehicle** | 2020 | RGB–热红外检测 | 56,878张图像（28,439对） | 采用旋转框标注的车辆 | [数据](https://github.com/VisDrone/DroneVehicle) · [论文](https://arxiv.org/abs/2003.02437) |
 | **UAVDT** | 2018 | 目标检测、单目标跟踪、多目标跟踪 | 100段序列；约80,000帧；超过800,000个标注框 | 不同飞行高度、视角、天气和光照下的车辆 | [数据存档](https://zenodo.org/records/14575517) · [论文](https://openaccess.thecvf.com/content_ECCV_2018/html/Dawei_Du_The_Unmanned_Aerial_ECCV_2018_paper.html) |
@@ -62,6 +72,8 @@
 
 | 数据集 | 年份 | 数据来源 | 任务 | 数据规模 | 主要对象/场景 | 资源 |
 |---|---:|---|---|---|---|---|
+| **WAID** | 2023 | 真实无人机 | 野生动物检测 | 14,375张图像 | 6种野生动物及多种栖息地和环境条件 | [数据/代码](https://github.com/xiaohuicui/WAID) · [论文](https://www.mdpi.com/2076-3417/13/18/10397) |
+| **WildlifeMapper Dataset** | 2024 | 航拍/无人机 | 多物种检测与识别 | 11,000张图像；28,000个标注 | 非洲哺乳动物与多物种航拍调查 | [数据/代码](https://github.com/UCSB-VRL/WildlifeMapper) |
 | **CART** | 2024 | 真实无人机 | RGB–热红外低空机器人感知 | 多段同步飞行序列，详见发布页面 | 河流、湖泊、海岸、沙漠和森林 | [数据](https://data.caltech.edu/records/cks6g-ps927) · [代码](https://github.com/aerorobotics/caltech-aerial-rgbt-dataset) · [论文](https://arxiv.org/abs/2403.08997) |
 | **BIRDSAI** | 2020 | 真实与合成混合 | 目标检测、单目标跟踪、多目标跟踪 | 48段真实视频＋124段合成视频 | 自然保护区中的人员与野生动物 | [数据](https://sites.google.com/view/elizabethbondi/dataset) · [论文](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_目标检测_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
 
@@ -69,6 +81,8 @@
 
 | 数据集 | 年份 | 任务 | 数据规模 | 主要对象/场景 | 资源 |
 |---|---:|---|---|---|---|
+| **CODrone** | 2025 | 有向目标检测 | — | 面向跨域鲁棒性和实际应用的多场景无人机图像 | [数据/代码](https://github.com/AHideoKuzeA/CODrone-A-Comprehensive-Oriented-Object-Detection-benchmark-for-UAV) · [论文](https://arxiv.org/abs/2504.20032) |
+| **WildUAV** | 2022 | 单目深度估计 | 1,500余张高分辨率RGB图像，附参考深度与位姿 | 室外垂直和倾斜航拍场景 | [数据/代码](https://github.com/hrflr/wuav) · [论文](https://doi.org/10.1109/LRA.2022.3154489) |
 | **UAVBench + UAVIT-1M（西工大）** | 2026 | 多模态大模型评测与指令微调 | UAVBench：96.6万条样本/43个测试单元；UAVIT-1M：基于78.9万张真实图像的124万条指令 | 图像/区域分类与描述、视觉问答、检测、视觉定位等低空视觉—语言任务 | [项目](https://uavbench.github.io/) · [数据](https://huggingface.co/datasets/ZhanYang-nwpu/UAVBench) · [论文](https://arxiv.org/abs/2603.14336) |
 | **SpatialSky-Bench / SpatialSky-Dataset** | 2025 | 视觉语言模型空间推理与无人机导航 | SpatialSky-Dataset含100万条标注样本；基准包含13个子类别 | 环境感知、距离与高度、边界框、着陆安全和场景理解 | [代码/数据](https://github.com/linglingxiansen/SpatialSKy) · [论文](https://arxiv.org/abs/2511.13269) |
 | **MM-UAVBench** | 2025 | 多模态大模型感知、认知与规划 | 1,549段视频片段＋2,873张图像；19项任务 | 目标/场景/事件理解，以及空中与地面智能体协同规划 | [代码/数据](https://github.com/AI9Stars/MM-UAVBench) |
