@@ -22,9 +22,10 @@ For search-and-rescue datasets, also report continuous-video structure, negative
 
 Please verify that the resource:
 
-- uses a camera or sensor carried onboard a UAV to observe the ground, water, people, infrastructure, or surrounding environment;
-- is not an anti-UAV, drone-detection, or drone-tracking dataset recorded by ground-based, fixed, or other external cameras;
-- clearly identifies UAV acquisition; mixed aerial datasets should be included only when the UAV subset is separable and documented;
+- uses a camera or sensor carried by a UAV, helicopter, small fixed-wing aircraft, or another low-altitude aerial platform to observe the ground, water, people, infrastructure, or surrounding environment;
+- does not treat UAVs themselves as the detection or tracking targets;
+- is not an anti-UAV surveillance dataset recorded by ground-based, fixed, or other external cameras;
+- clearly documents the aerial acquisition platform when possible;
 - has an official project, dataset, paper, archive, or code link;
 - is not already listed;
 - includes enough public information to identify its task and modality;
