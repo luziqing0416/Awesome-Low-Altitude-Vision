@@ -1,119 +1,121 @@
 # 低空视觉资源精选
 
-> 面向低空无人机视觉的数据集、论文、基准与研究资源索引。
+> 面向低空无人机视觉的数据集、研究论文、工具与资源索引。
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0--1.0-lightgrey.svg)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+Low-altitude UAV vision differs from satellite and ground-level vision in viewpoint, target scale, camera motion, background, and operational constraints. This list prioritizes search and rescue, disaster monitoring, and infrastructure inspection while retaining other domains that may offer transferable insights.
 
 [English](README.md) | **简体中文**
 
-低空无人机视觉通常面临俯视视角、目标尺度小、相机运动、复杂背景和真实任务约束。本清单同时保留搜救、灾害响应、基础设施巡检、交通、农业、生态、通用视觉与合成数据资源。
-
 ## 目录
 
-- [数据集](#数据集)
-  - [搜索救援与公共安全](#搜索救援与公共安全)
-  - [灾害与环境风险](#灾害与环境风险)
-  - [基础设施巡检](#基础设施巡检)
-  - [交通与城市监测](#交通与城市监测)
-  - [农业林业与生态](#农业林业与生态)
-  - [通用低空视觉](#通用低空视觉)
-  - [合成与仿真数据](#合成与仿真数据)
-- [论文与基准](#论文与基准)
-- [参与贡献](#参与贡献)
+- [Datasets](#datasets): [SAR](#1-search-and-rescue) · [Disaster](#2-disaster-monitoring-and-assessment) · [Inspection](#3-infrastructure-inspection) · [Human](#4-human-and-crowd-understanding) · [Transportation](#5-transportation-and-urban-monitoring) · [Agriculture & Ecology](#6-agriculture-forestry-and-ecological-monitoring) · [General Benchmarks](#7-general-uav-vision-benchmarks) · [Synthetic](#8-synthetic-uav-datasets)
+- [Research Papers](#research-papers)
+- [Tools and Resources](#tools-and-resources)
 
 ## 数据集
 
-### 搜索救援与公共安全
+The **Scale** column reports released images, annotated frames, or videos when verifiable. Counts may differ across versions and benchmark tracks.
 
-| 数据集 | 年份 | 任务 | 模态 | 主要内容 | 资源 |
+### 1. 搜索与救援
+
+| Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
+|---|---:|---|---|---|---|---|
+| **NOMAD** | 2023 | Staged real UAV | Detection | 42,825 frames; 100 actors | Occluded people at five aerial distances | [Data](https://github.com/ArtRuss/NOMAD) · [Paper](https://arxiv.org/abs/2309.09518) |
+| **SeaDronesSee** | 2022 | Staged/real UAV | Detection, SOT, MOT | 54,000+ frames; 400,000+ instances | Swimmers, boats, jet skis, rescue appliances, buoys | [Site](https://seadronessee.cs.uni-tuebingen.de/) · [Data](https://seadronessee.cs.uni-tuebingen.de/dataset) · [Paper](https://openaccess.thecvf.com/content/WACV2022/html/Varga_SeaDronesSee_A_Maritime_Benchmark_for_Detecting_Humans_in_Open_Water_WACV_2022_paper.html) |
+| **HERIDAL** | 2019 | Real/staged UAV | Detection | 1,600+ images; 68,750+ derived patches | People in wilderness and Mediterranean landscapes | [Paper](https://doi.org/10.1007/s11263-019-01177-1) |
+| **Post-Disaster Survivor** | — | Real UAV | Detection | 879 images | Survivors in post-disaster ruins | [Data](https://github.com/HaoqianSong/Post-Disaster-Dataset) |
+
+### 2. 灾害监测与评估
+
+| Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
+|---|---:|---|---|---|---|---|
+| **RescueNet** | 2023 | Real UAV | Classification, segmentation, VQA | 4,494 images | Damage, blocked roads, debris, water, vehicles | [Data](https://github.com/BinaLab/RescueNet-A-High-Resolution-Post-Disaster-UAV-Dataset-for-Semantic-Segmentation) · [Paper](https://www.nature.com/articles/s41597-023-02799-4) |
+| **FloodNet** | 2021 | Real UAV | Classification, segmentation, VQA | 2,343 images | Flooded/non-flooded infrastructure | [Data](https://github.com/BinaLab/FloodNet-Supervised_v1.0) · [Paper](https://arxiv.org/abs/2105.08655) |
+| **FLAME** | 2021 | Real UAV | Classification, segmentation | 47,992 labeled frames; 2,003 masks | Fire classification and pile-burn segmentation | [Project](https://github.com/AlirezaShamsoshoara/Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle) · [Data](https://doi.org/10.21227/7rk7-ey09) |
+
+### 3. 基础设施巡检
+
+| Dataset | Year | Source | Tasks | Scale | Main subjects | Resources |
+|---|---:|---|---|---|---|---|
+| **PTL-AI Furnas** | 2022 | Real inspection | Classification, fault recognition | 6,295 images | Power-line components and faults | [Data](https://github.com/freds0/PTL-AI_Furnas_Dataset) · [Paper](https://ieeexplore.ieee.org/document/9991806) |
+| **TTPLA** | 2020 | Real aerial | Detection, semantic/instance segmentation | 1,100 original 4K images; 8,987 instances | Transmission towers and power lines | [Data](https://github.com/r3ab/ttpla_dataset) · [Paper](https://openaccess.thecvf.com/content/ACCV2020/html/Abdelfattah_TTPLA_An_Aerial-Image_Dataset_for_Detection_and_Segmentation_of_Transmission_ACCV_2020_paper.html) |
+
+### 4. 人员与人群理解
+
+| Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
+|---|---:|---|---|---|---|---|
+| **Manipal UAV Person** | 2023 | Real UAV | Detection | 33 videos; 13,462 images; 153,112 instances | Small persons under varied scale, pose, weather, and lighting | [Data](https://github.com/Akshathakrbhat/Manipal-UAV-Person-Dataset) · [Paper](https://doi.org/10.1016/j.isprsjprs.2022.11.022) |
+| **Okutama-Action** | 2017 | Real UAV | Detection, action recognition | 43 min; 12 videos; 77,365 frames | Concurrent outdoor human actions | [Data](https://okutama-action.org/) · [Paper](https://openaccess.thecvf.com/content_cvpr_2017_workshops/w24/html/Barekatain_Okutama-Action_An_Aerial_CVPR_2017_paper.html) |
+
+### 5. 交通与城市监测
+
+| Dataset | Year | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|
-| **NOMAD** | 2023 | 检测 | RGB视频 | 多飞行距离、遮挡条件下的人员 | [数据集](https://github.com/ArtRuss/NOMAD) · [论文](https://arxiv.org/abs/2309.09518) |
-| **SeaDronesSee** | 2022 | 检测、单/多目标跟踪 | RGB视频+元数据 | 落水者、船、摩托艇、救生设施和浮标 | [官网](https://seadronessee.cs.uni-tuebingen.de/) · [数据](https://seadronessee.cs.uni-tuebingen.de/dataset) · [论文](https://openaccess.thecvf.com/content/WACV2022/html/Varga_SeaDronesSee_A_Maritime_Benchmark_for_Detecting_Humans_in_Open_Water_WACV_2022_paper.html) |
-| **Manipal UAV Person** | 2020 | 检测 | RGB视频 | 不同天气、光照和平台下的小尺度人员 | [数据集](https://github.com/Akshathakrbhat/Manipal-UAV-Person-Dataset) |
-| **HERIDAL** | 2019 | 检测 | RGB图像 | 地中海地貌中的陆地搜救人员 | [论文](https://doi.org/10.1007/s11263-019-01177-1) |
-| **Okutama-Action** | 2017 | 检测、动作识别 | RGB视频 | 航拍视角下的多人动作 | [数据集](https://okutama-action.org/) · [论文](https://openaccess.thecvf.com/content_cvpr_2017_workshops/w24/html/Barekatain_Okutama-Action_An_Aerial_CVPR_2017_paper.html) |
+| **AU-AIR** | 2020 | Detection | 32,823 frames; 132,034 instances | Urban traffic + flight metadata | [Data](https://bozcani.github.io/auairdataset) · [Paper](https://doi.org/10.1109/ICRA40945.2020.9197293) |
+| **DroneVehicle** | 2020 | RGB–thermal detection | 56,878 images (28,439 pairs) | Vehicles with oriented boxes | [Data](https://github.com/VisDrone/DroneVehicle) · [Paper](https://arxiv.org/abs/2003.02437) |
+| **UAVDT** | 2018 | Detection, SOT, MOT | 100 sequences; ~80,000 frames; 800,000+ boxes | Vehicles under varied altitude, view, weather, lighting | [Archive](https://zenodo.org/records/14575517) · [Paper](https://openaccess.thecvf.com/content_ECCV_2018/html/Dawei_Du_The_Unmanned_Aerial_ECCV_2018_paper.html) |
+| **UAVid** | 2018 | Semantic segmentation | 30 sequences; 300 annotated frames | Roads, buildings, vegetation, vehicles, people | [Data](https://uavid.nl/) · [Paper](https://arxiv.org/abs/1810.10438) |
 
-### 灾害与环境风险
+### 6. 农业、林业与生态监测
 
-| 数据集 | 年份 | 任务 | 模态 | 主要内容 | 资源 |
+| Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
+|---|---:|---|---|---|---|---|
+| **CART** | 2024 | Real UAV | RGB–thermal field robotics | Multiple synchronized flight sequences; see release | Rivers, lakes, coasts, deserts, forests | [Data](https://data.caltech.edu/records/cks6g-ps927) · [Code](https://github.com/aerorobotics/caltech-aerial-rgbt-dataset) · [Paper](https://arxiv.org/abs/2403.08997) |
+| **BIRDSAI** | 2020 | Real + synthetic | Detection, SOT, MOT | 48 real + 124 synthetic videos | Humans and animals in protected areas | [Data](https://sites.google.com/view/elizabethbondi/dataset) · [Paper](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
+
+### 7. 通用无人机视觉基准
+
+| Dataset | Year | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|
-| **C2A** | 2024 | 检测 | 合成RGB | 合成灾害响应场景中的人员 | [数据与代码](https://github.com/Ragib-Amin-Nihal/C2A) |
-| **RescueNet** | 2023 | 分类、分割 | RGB | 灾后损毁和场景理解 | [论文与数据](https://www.nature.com/articles/s41597-023-02799-4) |
-| **FloodNet** | 2021 | 分类、分割、视觉问答 | RGB | 飓风后受淹与未受淹基础设施 | [数据集](https://github.com/BinaLab/FloodNet-Supervised_v1.0) · [论文](https://arxiv.org/abs/2105.08655) |
-| **FLAME** | 2021 | 分类、分割 | RGB、热红外、视频 | 无人机火灾监测 | [项目](https://github.com/AlirezaShamsoshoara/Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle) · [数据](https://doi.org/10.21227/7rk7-ey09) |
+| **VisDrone** | 2018– | Detection, tracking, crowd counting | 10,209 images; 288 clips / 261,908 frames; 2.6M+ boxes | People and vehicles in urban/rural scenes | [Data](https://github.com/VisDrone/VisDrone-Dataset) · [Paper](https://doi.org/10.1109/TPAMI.2021.3119563) |
+| **UAV123 / UAV20L** | 2016 | SOT | 123 sequences; 110,000+ frames | People, vehicles, boats, other targets | [Project](https://cemse.kaust.edu.sa/ivul/uav123) · [Paper](https://arxiv.org/abs/1605.07109) |
 
-### 基础设施巡检
+### 8. 合成无人机数据集
 
-| 数据集 | 年份 | 任务 | 主要内容 | 资源 |
-|---|---:|---|---|---|
-| **PTL-AI Furnas** | 2023 | 分类、检测 | 输电线路部件和故障 | [数据集](https://github.com/freds0/PTL-AI_Furnas_Dataset) |
-| **TTPLA** | 2020 | 检测、语义/实例分割 | 输电塔和细电力线 | [数据集](https://github.com/r3ab/ttpla_dataset) · [论文](https://openaccess.thecvf.com/content/ACCV2020/html/Abdelfattah_TTPLA_An_Aerial-Image_Dataset_for_Detection_and_Segmentation_of_Transmission_ACCV_2020_paper.html) |
+A cross-cutting index: synthetic datasets may also appear under their primary application category.
 
-### 交通与城市监测
+| Dataset | Year | Generation/source | Application | Scale | Intended use | Resources |
+|---|---:|---|---|---|---|---|
+| **C2A** | 2024 | Composited humans + disaster backgrounds | SAR | 10,215 images; 360,000+ instances | Disaster human detection and pose diversity | [Data/code](https://github.com/Ragib-Amin-Nihal/C2A) · [Paper](https://arxiv.org/abs/2408.04922) |
+| **Synthetic SeaDronesSee** | — | Maritime simulation/rendering | SAR | Version-dependent | Detection, augmentation, sim-to-real | [Official release](https://seadronessee.cs.uni-tuebingen.de/dataset) |
+| **BIRDSAI Synthetic** | 2020 | AirSim-W thermal simulation | Ecology | 124 videos | Thermal detection/tracking and domain adaptation | [Data](https://sites.google.com/view/elizabethbondi/dataset) · [Paper](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
+| **VictimDet composites** | 2022 | Harmonized composite victims | SAR | See project release | Synthetic victim-detector training | [Data/code](https://github.com/noahzn/VictimDet) |
 
-| 数据集 | 年份 | 任务 | 模态 | 主要内容 | 资源 |
-|---|---:|---|---|---|---|
-| **AU-AIR** | 2020 | 检测 | RGB视频+元数据 | 低空城市交通 | [数据](https://bozcani.github.io/auairdataset) · [论文](https://doi.org/10.1109/ICRA40945.2020.9197293) |
-| **DroneVehicle** | 2020 | 检测 | RGB–热红外 | 跨模态车辆与旋转框 | [数据](https://github.com/VisDrone/DroneVehicle) · [论文](https://arxiv.org/abs/2003.02437) |
-| **UAVDT** | 2018 | 检测、单/多目标跟踪 | RGB视频 | 不同高度、视角、天气和光照下的车辆 | [数据存档](https://zenodo.org/records/14575517) · [论文](https://openaccess.thecvf.com/content_ECCV_2018/html/Dawei_Du_The_Unmanned_Aerial_ECCV_2018_paper.html) |
-| **UAVid** | 2018 | 语义分割 | 4K RGB视频 | 城市道路、建筑、植被、车辆和人员 | [数据](https://uavid.nl/) · [论文](https://arxiv.org/abs/1810.10438) |
+## 研究论文
 
-### 农业林业与生态
+Dataset-introduction papers are linked in the tables above. This section is reserved for method, system, survey, and comparative research.
 
-| 数据集 | 年份 | 任务 | 模态 | 主要内容 | 资源 |
-|---|---:|---|---|---|---|
-| **CART** | 2024 | 低空机器人感知 | RGB–热红外+GPS/IMU | 河流、湖泊、海岸、沙漠和森林 | [数据](https://data.caltech.edu/records/cks6g-ps927) · [代码](https://github.com/aerorobotics/caltech-aerial-rgbt-dataset) · [论文](https://arxiv.org/abs/2403.08997) |
-| **BIRDSAI** | 2020 | 检测、单/多目标跟踪 | 真实与合成热红外视频 | 保护区中的人员与野生动物 | [数据](https://sites.google.com/view/elizabethbondi/dataset) · [论文](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
+### 1. 无人机视觉感知
 
-### 通用低空视觉
+Detection, tracking, video understanding, segmentation, action recognition, and small-object perception. *Papers to be curated.*
 
-| 数据集 | 年份 | 任务 | 主要内容 | 资源 |
-|---|---:|---|---|---|
-| **VisDrone** | 2018– | 检测、跟踪、人群计数 | 城乡场景中的行人与车辆 | [数据](https://github.com/VisDrone/VisDrone-Dataset) · [论文](https://doi.org/10.1109/TPAMI.2021.3119563) |
-| **UAV123 / UAV20L** | 2016 | 单目标跟踪 | 人员、车辆、船只等目标 | [项目](https://cemse.kaust.edu.sa/ivul/uav123) · [论文](https://arxiv.org/abs/1605.07109) |
+### 2. 多模态学习与泛化
 
-### 合成与仿真数据
+Sensor/metadata fusion, cross-domain generalization, domain adaptation, and sim-to-real. *Papers to be curated.*
 
-| 数据集/工具 | 年份 | 用途 | 资源 |
-|---|---:|---|---|
-| **C2A** | 2024 | 合成灾害人员检测 | [数据与代码](https://github.com/Ragib-Amin-Nihal/C2A) |
-| **Synthetic SeaDronesSee** | — | 合成海上搜救目标检测 | [官方数据页](https://seadronessee.cs.uni-tuebingen.de/dataset) |
-| **AirSim** | 2017 | 无人机与自动驾驶仿真 | [代码](https://github.com/microsoft/AirSim) |
-| **CARLA** | 2017 | 城市仿真与可配置航拍相机 | [代码](https://github.com/carla-simulator/carla) |
+### 3. 合成数据与数据中心学习
 
-## 论文与基准
+Simulation, generation, augmentation, annotation, filtering, and quality evaluation. *Papers to be curated.*
 
-### 检测与跟踪
+### 4. 视觉语言模型、智能体与综述
 
-- **Detection and Tracking Meet Drones Challenge** — IEEE TPAMI 2022。[论文](https://doi.org/10.1109/TPAMI.2021.3119563)
-- **AU-AIR: A Multi-modal Unmanned Aerial Vehicle Dataset for Low Altitude Traffic Surveillance** — ICRA 2020。[论文](https://doi.org/10.1109/ICRA40945.2020.9197293)
-- **The Unmanned Aerial Vehicle Benchmark: Object Detection and Tracking** — ECCV 2018。[论文](https://openaccess.thecvf.com/content_ECCV_2018/html/Dawei_Du_The_Unmanned_Aerial_ECCV_2018_paper.html)
-- **A Benchmark and Simulator for UAV Tracking** — ECCV 2016。[论文](https://arxiv.org/abs/1605.07109)
+VLM-assisted annotation, prompt/scene planning, agentic loops, surveys, and comparative benchmarks. *Papers to be curated.*
 
-### 人员理解与搜救
+### 5. 低空应用系统
 
-- **NOMAD: A Natural, Occluded, Multi-scale Aerial Dataset for Emergency Response Scenarios** — 2023。[论文](https://arxiv.org/abs/2309.09518)
-- **SeaDronesSee: A Maritime Benchmark for Detecting Humans in Open Water** — WACV 2022。[论文](https://openaccess.thecvf.com/content/WACV2022/html/Varga_SeaDronesSee_A_Maritime_Benchmark_for_Detecting_Humans_in_Open_Water_WACV_2022_paper.html)
-- **Deep Learning Approach on Aerial Imagery in Supporting Land Search and Rescue Missions** — IJCV 2019。[论文](https://doi.org/10.1007/s11263-019-01177-1)
-- **Okutama-Action: An Aerial View Video Dataset for Concurrent Human Action Detection** — CVPR Workshops 2017。[论文](https://openaccess.thecvf.com/content_cvpr_2017_workshops/w24/html/Barekatain_Okutama-Action_An_Aerial_CVPR_2017_paper.html)
+End-to-end SAR, disaster, inspection, traffic, agriculture/ecology, and onboard systems. *Papers to be curated.*
 
-### 灾害、巡检与多模态
+## 工具与资源
 
-- **CART: Caltech Aerial RGB-Thermal Dataset in the Wild** — 2024。[论文](https://arxiv.org/abs/2403.08997)
-- **RescueNet** — Scientific Data 2023。[论文](https://www.nature.com/articles/s41597-023-02799-4)
-- **FloodNet** — IEEE Access 2021。[论文](https://arxiv.org/abs/2105.08655)
-- **The FLAME Dataset** — Computer Networks 2021。[项目与数据](https://github.com/AlirezaShamsoshoara/Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle)
-- **TTPLA** — ACCV 2020。[论文](https://openaccess.thecvf.com/content/ACCV2020/html/Abdelfattah_TTPLA_An_Aerial-Image_Dataset_for_Detection_and_Segmentation_of_Transmission_ACCV_2020_paper.html)
-- **BIRDSAI** — WACV 2020。[论文](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html)
-
-### 合成数据、仿真与智能体
-
-本节将继续收录低空场景可控生成、仿真到真实迁移、自动标注、图文一致性、物理合理性以及闭环生成智能体相关工作。
-
-- [Synthetic SeaDronesSee](https://seadronessee.cs.uni-tuebingen.de/dataset)
-- [AirSim](https://github.com/microsoft/AirSim)
-- [CARLA](https://github.com/carla-simulator/carla)
+- **Simulators:** [AirSim](https://github.com/microsoft/AirSim) · [CARLA](https://github.com/carla-simulator/carla)
+- **Related lists:** [Awesome VisDrone](https://github.com/VisDrone/Awesome-VisDrone) · [UAV-Vision](https://github.com/wangdongdut/UAV-Vision) · [Awesome Water Surface Perception](https://github.com/WaterScenes/Awesome-Water-Surface-Perception) · [Awesome Dataset Distillation](https://github.com/Guang000/Awesome-Dataset-Distillation)
 
 ## 参与贡献
 
-欢迎通过 [Issue 模板](https://github.com/luziqing0416/Awesome-Low-Altitude-Vision/issues/new?template=resource-suggestion.yml) 或 Pull Request 推荐资源。详细维护规范见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+See [CONTRIBUTING.md](CONTRIBUTING.md) or use the [resource suggestion template](https://github.com/luziqing0416/Awesome-Low-Altitude-Vision/issues/new?template=resource-suggestion.yml). This repository is an index and does not redistribute datasets or copyrighted papers.
 
-本仓库仅提供索引，不重新分发数据集或受版权保护的论文。
+## 许可证
+
+[CC0 1.0](LICENSE). Individual resources retain their original licenses.
