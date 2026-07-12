@@ -69,7 +69,7 @@ The **Scale** column reports released images, annotated frames, or videos when v
 
 | Dataset | Year | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|
-| **VisDrone** | 2018– | Detection, tracking, crowd counting | 10,209 images; 288 clips / 261,908 frames; 2.6M+ boxes | People and vehicles in urban/rural scenes | [Data](https://github.com/VisDrone/VisDrone-Dataset) · [Paper](https://doi.org/10.1109/TPAMI.2021.3119563) |
+| **VisDrone** | 2018 | Detection, tracking, crowd counting | 10,209 images; 288 clips / 261,908 frames; 2.6M+ boxes | People and vehicles in urban/rural scenes | [Data](https://github.com/VisDrone/VisDrone-Dataset) · [Paper](https://doi.org/10.1109/TPAMI.2021.3119563) |
 | **UAV123 / UAV20L** | 2016 | SOT | 123 sequences; 110,000+ frames | People, vehicles, boats, other targets | [Project](https://cemse.kaust.edu.sa/ivul/uav123) · [Paper](https://arxiv.org/abs/1605.07109) |
 
 ### 8. Synthetic UAV Datasets
@@ -79,9 +79,9 @@ A cross-cutting index: synthetic datasets may also appear under their primary ap
 | Dataset | Year | Generation/source | Application | Scale | Intended use | Resources |
 |---|---:|---|---|---|---|---|
 | **C2A** | 2024 | Composited humans + disaster backgrounds | SAR | 10,215 images; 360,000+ instances | Disaster human detection and pose diversity | [Data/code](https://github.com/Ragib-Amin-Nihal/C2A) · [Paper](https://arxiv.org/abs/2408.04922) |
-| **Synthetic SeaDronesSee** | — | Maritime simulation/rendering | SAR | Version-dependent | Detection, augmentation, sim-to-real | [Official release](https://seadronessee.cs.uni-tuebingen.de/dataset) |
+| **Synthetic SeaDronesSee** | — | Pre-generated maritime synthetic data produced with a generation tool | SAR | — | Downloadable synthetic training data for maritime detection, augmentation, and sim-to-real research | [Official release](https://seadronessee.cs.uni-tuebingen.de/dataset) |
 | **BIRDSAI Synthetic** | 2020 | AirSim-W thermal simulation | Ecology | 124 videos | Thermal detection/tracking and domain adaptation | [Data](https://sites.google.com/view/elizabethbondi/dataset) · [Paper](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
-| **VictimDet composites** | 2022 | Harmonized composite victims | SAR | See project release | Synthetic victim-detector training | [Data/code](https://github.com/noahzn/VictimDet) |
+| **VictimDet composites** | 2022 | Pre-generated composites produced by a harmonization pipeline | SAR | — | Downloadable composite victim images; project code can be used to reproduce or extend the generation pipeline | [Data/code](https://github.com/noahzn/VictimDet) |
 
 ## Research Papers
 
