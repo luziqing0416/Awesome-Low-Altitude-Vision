@@ -2,49 +2,129 @@
 
 [Home](../README.md) · [中文主页](../README_zh-CN.md) · [Papers](../papers/README.md)
 
-This index records the dataset's official benchmark tasks rather than every possible downstream use. “Size” values are intentionally omitted when dataset versions or official splits differ; consult the linked source for exact statistics.
+## Organization Standard
 
-## General UAV Perception
+The repository uses a two-level organization:
 
-| Dataset | Year | Tasks | Modality | Scenes / targets | Resources |
+1. **Primary grouping: application scenario** — the real-world problem for which the data were collected.
+2. **Secondary descriptors: task and modality** — comparable tags that make cross-domain reuse visible.
+
+Within each scenario, datasets are sorted by **release year in descending order**. A dataset appears once under its primary scenario; cross-domain relevance is expressed through tags rather than duplicate entries.
+
+### Application Taxonomy
+
+| Category | Typical scenes and targets |
+|---|---|
+| Search, rescue, and public safety | Missing persons, swimmers, disaster victims, emergency exercises |
+| Disaster and environmental hazards | Floods, fires, damaged buildings and roads |
+| Infrastructure inspection | Power lines, towers, insulators, bridges, pavements, wind turbines |
+| Transportation and urban monitoring | Vehicles, pedestrians, traffic flow, urban scene parsing |
+| Agriculture and forestry | Crops, weeds, plant stress, forests, fire monitoring |
+| Ecology and wildlife | Animals, humans, anti-poaching, habitat monitoring |
+| General-purpose aerial perception | Broad multi-scene benchmarks without one dominant application |
+| Synthetic and simulated data | Generated or simulated low-altitude imagery for training and evaluation |
+
+### Standard Task Tags
+
+`Cls` classification · `Det` object detection · `SOT` single-object tracking · `MOT` multi-object tracking · `SemSeg` semantic segmentation · `InstSeg` instance segmentation · `VQA` visual question answering · `Action` action recognition · `Loc` localization
+
+### Standard Modality Tags
+
+`RGB` visible imagery · `TIR` thermal infrared · `RGB-T` aligned RGB and thermal · `MS` multispectral · `Video` temporal sequences · `Meta` flight/environment metadata · `Syn` synthetic imagery
+
+### Source and Access Policy
+
+Links are prioritized in this order:
+
+1. official dataset or author-maintained project;
+2. publisher/CVF/arXiv paper page;
+3. trusted archival copy such as Zenodo;
+4. clearly labeled community mirror only when no maintained official download exists.
+
+`Open` means a public download was located; `Request` means registration or author approval may be required; `Archive` means an archival copy is used because the original project page is unavailable; `Check` means users should verify current availability and terms.
+
+## 1. Search, Rescue, and Public Safety
+
+| Dataset | Year | Task tags | Modality | Focus | Access and resources |
 |---|---:|---|---|---|---|
-| **VisDrone** | 2018– | Detection, tracking, crowd counting | RGB image/video | Pedestrians and vehicles; urban and rural scenes | [Dataset](https://github.com/VisDrone/VisDrone-Dataset) · [Paper](https://doi.org/10.1109/TPAMI.2021.3119563) |
-| **UAVDT** | 2018 | Detection, single-/multi-object tracking | RGB video | Vehicles under varied altitude, view, weather, and illumination | [Project](https://sites.google.com/site/daviddo0323/projects/uavdt) · [Paper](https://openaccess.thecvf.com/content_ECCV_2018/html/Dawei_Du_The_Unmanned_Aerial_ECCV_2018_paper.html) |
-| **UAV123 / UAV20L** | 2016 | Single-object tracking | RGB video | People, vehicles, boats, and other moving targets | [Project](https://cemse.kaust.edu.sa/ivul/uav123) · [Paper](https://arxiv.org/abs/1605.07109) |
-| **AU-AIR** | 2020 | Detection and traffic understanding | RGB + flight/sensor metadata | Low-altitude urban traffic | [Dataset](https://bozcani.github.io/auairdataset) · [Paper](https://doi.org/10.1109/ICRA40945.2020.9197293) |
-| **UAVid** | 2018 | Semantic segmentation | 4K RGB video | Urban roads, buildings, vegetation, vehicles, and people | [Dataset](https://uavid.nl/) · [Paper](https://arxiv.org/abs/1810.10438) |
-| **Okutama-Action** | 2017 | Human detection and action recognition | RGB video | Human actions observed from UAVs | [Dataset](https://okutama-action.org/) · [Paper](https://openaccess.thecvf.com/content_cvpr_2017_workshops/w24/html/Barekatain_Okutama-Action_An_Aerial_CVPR_2017_paper.html) |
+| **NOMAD** | 2023 | Det | RGB, Video | Occluded people at five aerial distances; walking, lying, and hiding | Open · [Dataset](https://github.com/ArtRuss/NOMAD) · [Paper](https://arxiv.org/abs/2309.09518) |
+| **SeaDronesSee** | 2022 | Det, SOT, MOT | RGB, Video, Meta | Swimmers, boats, jet skis, life-saving appliances, and buoys | Open · [Official site](https://seadronessee.cs.uni-tuebingen.de/) · [Dataset](https://seadronessee.cs.uni-tuebingen.de/dataset) · [Paper](https://openaccess.thecvf.com/content/WACV2022/html/Varga_SeaDronesSee_A_Maritime_Benchmark_for_Detecting_Humans_in_Open_Water_WACV_2022_paper.html) |
+| **Manipal UAV Person Dataset** | 2020 | Det | RGB, Video | Small-person detection across varied weather, lighting, and UAV platforms | Open · [Dataset](https://github.com/Akshathakrbhat/Manipal-UAV-Person-Dataset) |
+| **HERIDAL** | 2019 | Det | RGB | People in Mediterranean landscapes for land search and rescue | Check · [Paper](https://doi.org/10.1007/s11263-019-01177-1) |
+| **Okutama-Action** | 2017 | Det, Action | RGB, Video | Concurrent human actions from an aerial viewpoint | Open · [Dataset](https://okutama-action.org/) · [Paper](https://openaccess.thecvf.com/content_cvpr_2017_workshops/w24/html/Barekatain_Okutama-Action_An_Aerial_CVPR_2017_paper.html) |
 
-## Maritime Search and Rescue
+## 2. Disaster and Environmental Hazards
 
-| Dataset | Year | Tasks | Modality / annotations | Resources |
-|---|---:|---|---|---|
-| **SeaDronesSee** | 2022 | Detection, SOT, MOT | RGB UAV imagery; swimmers, boats, jet skis, life-saving appliances, buoys; environmental metadata | [Official site](https://seadronessee.cs.uni-tuebingen.de/) · [Dataset](https://seadronessee.cs.uni-tuebingen.de/dataset) · [Paper](https://openaccess.thecvf.com/content/WACV2022/html/Varga_SeaDronesSee_A_Maritime_Benchmark_for_Detecting_Humans_in_Open_Water_WACV_2022_paper.html) |
-| **Synthetic SeaDronesSee** | — | Synthetic maritime object detection | Generated maritime SAR scenes linked by the benchmark maintainers | [Dataset page](https://seadronessee.cs.uni-tuebingen.de/dataset) |
+| Dataset | Year | Task tags | Modality | Focus | Access and resources |
+|---|---:|---|---|---|---|
+| **RescueNet** | 2023 | Cls, SemSeg | RGB | Post-disaster damage and scene understanding | Open · [Paper and data](https://www.nature.com/articles/s41597-023-02799-4) |
+| **FloodNet** | 2021 | Cls, SemSeg, VQA | RGB | Post-Hurricane Harvey flooded and non-flooded infrastructure | Open · [Dataset](https://github.com/BinaLab/FloodNet-Supervised_v1.0) · [Paper](https://arxiv.org/abs/2105.08655) |
+| **FLAME** | 2021 | Cls, SemSeg | RGB, TIR, Video | UAV pile-burn imagery for fire classification and segmentation | Open/non-commercial terms · [Project/code](https://github.com/AlirezaShamsoshoara/Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle) · [Dataset record](https://doi.org/10.21227/7rk7-ey09) |
+| **C2A** | 2024 | Det | Syn | Synthetic humans and disaster-response scenes | Open · [Dataset/code](https://github.com/Ragib-Amin-Nihal/C2A) · synthetic-only |
 
-## Disaster Response
+## 3. Infrastructure Inspection
 
-| Dataset | Year | Tasks | Scene / annotations | Resources |
-|---|---:|---|---|---|
-| **FloodNet** | 2021 | Classification, segmentation, VQA | High-resolution post-Hurricane Harvey UAS imagery with flooded/non-flooded infrastructure labels | [Dataset](https://github.com/BinaLab/FloodNet-Supervised_v1.0) · [Paper](https://arxiv.org/abs/2105.08655) |
-| **RescueNet** | 2023 | Classification and segmentation | High-resolution post-disaster UAV imagery with damage and scene classes | [Paper and data](https://www.nature.com/articles/s41597-023-02799-4) |
+| Dataset | Year | Task tags | Modality | Focus | Access and resources |
+|---|---:|---|---|---|---|
+| **PTL-AI Furnas** | 2023 | Cls, Det | RGB | Components and faults in real power-transmission-line maintenance imagery | Open · [Dataset](https://github.com/freds0/PTL-AI_Furnas_Dataset) |
+| **TTPLA** | 2020 | Det, SemSeg, InstSeg | RGB | Transmission towers and thin power lines under varied views and backgrounds | Open · [Dataset](https://github.com/r3ab/ttpla_dataset) · [Paper](https://openaccess.thecvf.com/content/ACCV2020/html/Abdelfattah_TTPLA_An_Aerial-Image_Dataset_for_Detection_and_Segmentation_of_Transmission_ACCV_2020_paper.html) |
 
-## Multimodal and Cross-Spectral Perception
+> This category intentionally remains broad. Future additions may cover bridges, façades, roofs, railways, roads, pipelines, solar panels, and wind turbines, provided the imagery was collected from a UAV or comparable low-altitude platform.
 
-| Dataset | Year | Tasks | Modality / annotations | Resources |
-|---|---:|---|---|---|
-| **DroneVehicle** | 2020 | Vehicle detection | Paired RGB and infrared UAV imagery with oriented bounding boxes | [Dataset](https://github.com/VisDrone/DroneVehicle) · [Paper](https://arxiv.org/abs/2003.02437) |
+## 4. Transportation and Urban Monitoring
 
-## Suggested Metadata for Future Entries
+| Dataset | Year | Task tags | Modality | Focus | Access and resources |
+|---|---:|---|---|---|---|
+| **AU-AIR** | 2020 | Det | RGB, Video, Meta | Low-altitude urban traffic with flight and sensor metadata | Open · [Dataset](https://bozcani.github.io/auairdataset) · [Paper](https://doi.org/10.1109/ICRA40945.2020.9197293) |
+| **DroneVehicle** | 2020 | Det | RGB-T | Cross-modal vehicle detection with oriented bounding boxes | Open · [Dataset](https://github.com/VisDrone/DroneVehicle) · [Paper](https://arxiv.org/abs/2003.02437) |
+| **UAVDT** | 2018 | Det, SOT, MOT | RGB, Video | Vehicles across altitude, view, weather, and illumination conditions | Archive · [Dataset archive](https://zenodo.org/records/14575517) · [ECCV paper](https://openaccess.thecvf.com/content_ECCV_2018/html/Dawei_Du_The_Unmanned_Aerial_ECCV_2018_paper.html) |
+| **UAVid** | 2018 | SemSeg | RGB, Video | 4K urban roads, buildings, vegetation, vehicles, and people | Open · [Dataset](https://uavid.nl/) · [Paper](https://arxiv.org/abs/1810.10438) |
 
-- Official name and version
-- Release year
-- Acquisition platform and altitude range
-- Image/video modality and sensor type
-- Scene, target categories, and negative-frame availability
-- Official tasks and annotation formats
-- Dataset size and train/validation/test split
-- License, access procedure, and redistribution restrictions
-- Paper, project, download, code, and benchmark links
+## 5. Agriculture and Forestry
 
-> Dataset licenses and terms vary. A listing here does not imply permission to redistribute or use a dataset commercially.
+This category is retained because crop-scale targets, repetitive textures, multispectral sensors, seasonal domain shifts, and fine-grained segmentation can inform low-altitude data generation and evaluation.
+
+| Dataset | Year | Task tags | Modality | Focus | Access and resources |
+|---|---:|---|---|---|---|
+| **FLAME** | 2021 | Cls, SemSeg | RGB, TIR, Video | Prescribed fire monitoring from UAVs | Listed under [Disaster and Environmental Hazards](#2-disaster-and-environmental-hazards) |
+
+> Candidate agricultural datasets must clearly document UAV acquisition. Satellite-only and unspecified “aerial” datasets are not added by default.
+
+## 6. Ecology and Wildlife
+
+| Dataset | Year | Task tags | Modality | Focus | Access and resources |
+|---|---:|---|---|---|---|
+| **CART (Caltech Aerial RGB-Thermal)** | 2024 | Perception, localization | RGB-T, Meta | Rivers, lakes, coastlines, deserts, and forests for aerial field robotics | Open · [Dataset](https://data.caltech.edu/records/cks6g-ps927) · [Code](https://github.com/aerorobotics/caltech-aerial-rgbt-dataset) · [Paper](https://arxiv.org/abs/2403.08997) |
+| **BIRDSAI** | 2020 | Det, SOT, MOT | TIR, Video, Syn | Humans and animals in protected areas, including real and synthetic thermal video | Open · [Dataset page](https://sites.google.com/view/elizabethbondi/dataset) · [Paper](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
+
+## 7. General-Purpose Aerial Perception
+
+| Dataset | Year | Task tags | Modality | Focus | Access and resources |
+|---|---:|---|---|---|---|
+| **VisDrone** | 2018– | Det, SOT, MOT, crowd counting | RGB, Video | Diverse pedestrians and vehicles in urban and rural scenes | Open · [Dataset](https://github.com/VisDrone/VisDrone-Dataset) · [Paper](https://doi.org/10.1109/TPAMI.2021.3119563) |
+| **UAV123 / UAV20L** | 2016 | SOT | RGB, Video | People, vehicles, boats, and other moving targets | Open · [Project](https://cemse.kaust.edu.sa/ivul/uav123) · [Paper](https://arxiv.org/abs/1605.07109) |
+
+## 8. Synthetic and Simulated Data
+
+| Dataset / tool | Year | Task tags | Modality | Focus | Access and resources |
+|---|---:|---|---|---|---|
+| **C2A** | 2024 | Det | Syn | Composited/synthetic disaster scenarios for human detection | Open · [Dataset/code](https://github.com/Ragib-Amin-Nihal/C2A) |
+| **Synthetic SeaDronesSee** | — | Det | Syn | Generated maritime SAR scenes and objects | Open · [Official dataset page](https://seadronessee.cs.uni-tuebingen.de/dataset) |
+| **AirSim** | 2017 | Simulation | RGB, depth, segmentation, sensors | UAV and autonomous-vehicle simulation | Open · [Code](https://github.com/microsoft/AirSim) |
+
+## Dataset Metadata Checklist
+
+Every future entry should record, when available:
+
+- official name, version, release year, and maintenance status;
+- real, synthetic, or mixed origin;
+- UAV/platform type, altitude or GSD, camera angle, and geographic setting;
+- image/video modality, sensor type, resolution, and environmental metadata;
+- scene categories, target taxonomy, positive/negative-frame distribution, and target scale;
+- official tasks, annotation types/formats, sequence information, and split protocol;
+- dataset size, license, ethics/privacy notes, access procedure, and redistribution restrictions;
+- official project, stable download/archive, paper, code, and benchmark links.
+
+For search-and-rescue research, **negative-frame availability**, **continuous-video structure**, **target prevalence**, **target size**, and **real versus staged collection** are especially important. These fields will be added progressively when verified from primary sources.
+
+> A listing does not imply permission to redistribute or use a dataset commercially. Check the original terms before use.
