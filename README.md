@@ -109,23 +109,53 @@ Dataset-introduction papers are linked in the tables above. This section is rese
 
 ### 1. UAV Visual Perception
 
-Detection, tracking, video understanding, segmentation, action recognition, and small-object perception. *Papers to be curated.*
+Detection, tracking, video understanding, segmentation, action recognition, and small-object perception.
+
+| Year | Paper | Venue | Tags | Resources |
+|---:|---|---|---|---|
+| 2026 | Visual Prototype Conditioned Focal Region Generation for UAV-Based Object Detection | CVPR | Detection, tiny objects, focal regions | [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Li_Visual_Prototype_Conditioned_Focal_Region_Generation_for_UAV-Based_Object_Detection_CVPR_2026_paper.html) |
+| 2026 | Toward Low-Cost yet Effective Temporal Learning for UAV Tracking | CVPR | Tracking, temporal learning, efficiency | [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Xue_Toward_Low-Cost_yet_Effective_Temporal_Learning_for_UAV_Tracking_CVPR_2026_paper.html) |
+| 2026 | Rethinking Occlusion Modeling for UAV Tracking | CVPR | Tracking, occlusion, efficient transformers | [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Rethinking_Occlusion_Modeling_for_UAV_Tracking_CVPR_2026_paper.html) |
+| 2025 | PointSR: Self-Regularized Point Supervision for Drone-View Object Detection | CVPR | Detection, point supervision, pseudo boxes | [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Li_PointSR_Self-Regularized_Point_Supervision_for_Drone-View_Object_Detection_CVPR_2025_paper.html) |
+| 2025 | Learning Occlusion-Robust Vision Transformers for Real-Time UAV Tracking | CVPR | Tracking, occlusion, real time | [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Learning_Occlusion-Robust_Vision_Transformers_for_Real-Time_UAV_Tracking_CVPR_2025_paper.html) |
+| 2025 | Similarity-Guided Layer-Adaptive Vision Transformer for UAV Tracking | CVPR | Tracking, lightweight ViT | [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Xue_Similarity-Guided_Layer-Adaptive_Vision_Transformer_for_UAV_Tracking_CVPR_2025_paper.html) |
+| 2023 | Adaptive Sparse Convolutional Networks with Global Context Enhancement for Faster Object Detection on Drone Images | CVPR | Detection, sparse convolution, onboard efficiency | [Paper](https://openaccess.thecvf.com/content/CVPR2023/html/Du_Adaptive_Sparse_Convolutional_Networks_With_Global_Context_Enhancement_for_Faster_CVPR_2023_paper.html) |
+| 2019 | Delving into Robust Object Detection from Unmanned Aerial Vehicles: A Deep Nuisance Disentanglement Approach | ICCV | Detection, robustness, nuisance disentanglement | [Paper](https://openaccess.thecvf.com/content_ICCV_2019/html/Wu_Delving_Into_Robust_Object_Detection_From_Unmanned_Aerial_Vehicles_A_ICCV_2019_paper.html) |
 
 ### 2. Multimodal Learning and Generalization
 
-Sensor/metadata fusion, cross-domain generalization, domain adaptation, and sim-to-real. *Papers to be curated.*
+Sensor/metadata fusion, cross-domain generalization, domain adaptation, and sim-to-real.
+
+| Year | Paper | Venue | Tags | Resources |
+|---:|---|---|---|---|
+| 2025 | MUST: The First Dataset and Unified Framework for Multispectral UAV Single Object Tracking | CVPR | RGB-T, tracking, multimodal fusion | [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Qin_MUST_The_First_Dataset_and_Unified_Framework_for_Multispectral_UAV_CVPR_2025_paper.html) |
+| 2025 | UAVScenes: A Multi-Modal Dataset for UAVs | ICCV | Camera, LiDAR, multimodal perception | [Paper](https://openaccess.thecvf.com/content/ICCV2025/html/Wang_UAVScenes_A_Multi-Modal_Dataset_for_UAVs_ICCV_2025_paper.html) |
 
 ### 3. Synthetic Data and Data-Centric Learning
 
-Simulation, generation, augmentation, annotation, filtering, and quality evaluation. *Papers to be curated.*
+Simulation, generation, augmentation, annotation, filtering, and quality evaluation.
+
+| Year | Paper | Venue | Tags | Resources |
+|---:|---|---|---|---|
+| 2026 | AirSim360: A Panoramic Simulation Platform within Drone View | CVPR | Simulation, panoramic UAV view, closed loop | [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Ge_AirSim360_A_Panoramic_Simulation_Platform_within_Drone_View_CVPR_2026_paper.html) |
 
 ### 4. Vision-Language Models, Agents, and Surveys
 
-VLM-assisted annotation, prompt/scene planning, agentic loops, surveys, and comparative benchmarks. *Papers to be curated.*
+VLM-assisted annotation, prompt/scene planning, agentic loops, surveys, and comparative benchmarks.
+
+| Year | Paper | Venue | Tags | Resources |
+|---:|---|---|---|---|
+| 2025 | Where Does It Exist from the Low-Altitude: Spatial Aerial Video Grounding | NeurIPS | Vision-language grounding, aerial video, small objects | [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/76c5401551bbe8337dc38a2bd5eb394e-Abstract-Conference.html) |
+| 2025 | Embodied Crowd Counting | NeurIPS | Embodied perception, MLLM, active UAV observation | [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/6aa3267e3a0f7c2c718036d08d482a51-Abstract-Conference.html) |
+| 2024 | Recent Advances for Aerial Object Detection: A Survey | ACM Computing Surveys | Survey, detection, aerial vision | [Paper](https://dl.acm.org/doi/10.1145/3664598) |
 
 ### 5. Low-Altitude Application Systems
 
-End-to-end SAR, disaster, inspection, traffic, agriculture/ecology, and onboard systems. *Papers to be curated.*
+End-to-end SAR, disaster, inspection, traffic, agriculture/ecology, and onboard systems.
+
+| Year | Paper | Venue | Tags | Resources |
+|---:|---|---|---|---|
+| 2026 | PiLoT: Neural Pixel-to-3D Registration for UAV-Based Ego and Target Geo-Localization | CVPR | Geo-localization, onboard deployment, synthetic-to-real | [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Cheng_PiLoT_Neural_Pixel-to-3D_Registration_for_UAV-Based_Ego_and_Target_Geo-localization_CVPR_2026_paper.html) |
 
 ## Tools and Resources
 
