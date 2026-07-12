@@ -2,16 +2,30 @@
 
 Thank you for helping improve Awesome Low-Altitude Vision.
 
-Please verify that a proposed resource:
+## Curation Standard
 
-- is directly relevant to low-altitude UAV vision;
-- has an official project, dataset, paper, or code link;
+- Group resources primarily by application scenario.
+- Use task and sensor modality as secondary descriptors.
+- Sort entries within a section by release year, newest first.
+- List a dataset once under its primary scenario; use its description to show cross-domain relevance.
+- Prefer links in this order: official/author-maintained project, publisher or CVF/arXiv paper page, trusted archive such as Zenodo, then a clearly labeled community mirror.
+- Clearly distinguish real, synthetic, and mixed data.
+- Do not upload dataset archives or copyrighted paper PDFs.
+
+## Dataset Metadata
+
+Include the official name, release year, acquisition platform, tasks, modality, scenes or targets, annotation type, license/access conditions, and stable links when available.
+
+For search-and-rescue datasets, also report continuous-video structure, negative-frame availability, target prevalence, target scale, flight altitude or GSD, and whether the collection is real-world, staged, synthetic, or mixed whenever these facts can be verified.
+
+## Submission Checklist
+
+Please verify that the resource:
+
+- is directly relevant to UAVs or a comparable low-altitude aerial platform;
+- has an official project, dataset, paper, archive, or code link;
 - is not already listed;
-- includes enough information to identify its tasks and modality;
-- does not link to unauthorized copies of papers or datasets.
+- includes enough public information to identify its task and modality;
+- does not rely on an unauthorized copy.
 
-For a dataset, include its name, official URL, paper, year, tasks, modality, scenes or targets, annotations, and license or access conditions.
-
-For a paper, include its title, venue and year, paper URL, code or project URL, category, and a one-sentence explanation of its relevance.
-
-Prefer official project pages, publisher pages, arXiv, or author-maintained repositories. Do not upload dataset archives or copyrighted paper PDFs to this repository.
+For papers, include the title, authors, venue and year, paper URL, code/project URL, category, and a one-sentence explanation of relevance.
