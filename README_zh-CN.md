@@ -4,7 +4,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0--1.0-lightgrey.svg)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-本仓库只收录无人机机载视觉数据：相机或传感器必须搭载在无人机上，由无人机观察地面、水面、人员、设施或周围环境。不收录使用地面相机、固定相机或其他外部平台检测和跟踪空中无人机的数据集。
+本仓库收录低空机载视觉数据。相机或传感器可以搭载在无人机、直升机、小型固定翼飞机等低空航空平台上，用于观察地面、水面、人员、车辆、设施或自然环境。不收录将无人机本身作为检测或跟踪目标的数据，例如由地面相机或其他外部平台采集的反无人机监控数据。
 
 低空无人机视觉与卫星遥感和地面视觉在视角、目标尺度、相机运动、背景及任务约束等方面存在明显差异。本清单优先关注搜索救援、灾害监测与基础设施巡检，同时保留可能提供迁移借鉴的其他低空应用领域。
 
@@ -33,6 +33,7 @@
 
 | 数据集 | 年份 | 数据来源 | 任务 | 数据规模 | 主要对象/场景 | 资源 |
 |---|---:|---|---|---|---|---|
+| **LADI** | 2023 | 真实低空有人机/无人机 | 灾害多标签分类 | — | 收集于2015–2023年真实灾害响应中的低空倾斜影像 | [数据](https://registry.opendata.aws/ladi/) · [说明](https://github.com/ladi-dataset/ladi-overview) |
 | **RescueNet** | 2023 | 真实无人机 | 分类、语义分割、视觉问答 | 4,494张图像 | 建筑损毁、道路阻塞、废墟、水域和车辆 | [数据](https://github.com/BinaLab/RescueNet-A-High-Resolution-Post-Disaster-UAV-Dataset-for-Semantic-Segmentation) · [论文](https://www.nature.com/articles/s41597-023-02799-4) |
 | **FloodNet** | 2021 | 真实无人机 | 分类、语义分割、视觉问答 | 2,343张图像 | 受淹与未受淹的道路、建筑等基础设施 | [数据](https://github.com/BinaLab/FloodNet-Supervised_v1.0) · [论文](https://arxiv.org/abs/2105.08655) |
 | **FLAME** | 2021 | 真实无人机 | 分类、分割 | 47,992张标注帧；2,003张分割掩码 | 火灾分类与燃烧区域分割 | [项目](https://github.com/AlirezaShamsoshoara/Fire-目标检测-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle) · [数据](https://doi.org/10.21227/7rk7-ey09) |
@@ -73,6 +74,7 @@
 
 | 数据集 | 年份 | 数据来源 | 任务 | 数据规模 | 主要对象/场景 | 资源 |
 |---|---:|---|---|---|---|---|
+| **WildlifeMapper Dataset** | 2024 | 低空有人机/无人机 | 多物种检测与识别 | 11,000张图像；28,000个标注 | 非洲哺乳动物与多物种低空航拍调查 | [数据/代码](https://github.com/UCSB-VRL/WildlifeMapper) |
 | **WAID** | 2023 | 真实无人机 | 野生动物检测 | 14,375张图像 | 6种野生动物及多种栖息地和环境条件 | [数据/代码](https://github.com/xiaohuicui/WAID) · [论文](https://www.mdpi.com/2076-3417/13/18/10397) |
 | **CART** | 2024 | 真实无人机 | RGB–热红外低空机器人感知 | 多段同步飞行序列，详见发布页面 | 河流、湖泊、海岸、沙漠和森林 | [数据](https://data.caltech.edu/records/cks6g-ps927) · [代码](https://github.com/aerorobotics/caltech-aerial-rgbt-dataset) · [论文](https://arxiv.org/abs/2403.08997) |
 | **BIRDSAI** | 2020 | 真实与合成混合 | 目标检测、单目标跟踪、多目标跟踪 | 48段真实视频＋124段合成视频 | 自然保护区中的人员与野生动物 | [数据](https://sites.google.com/view/elizabethbondi/dataset) · [论文](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_目标检测_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
