@@ -31,6 +31,7 @@ The **Scale** column reports released images, annotated frames, or videos when v
 
 | Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|---|
+| **LADI** | 2023 | Real low-altitude airborne/UAV | Multi-label disaster classification | — | Oblique disaster-response imagery collected during events from 2015–2023 | [Data](https://registry.opendata.aws/ladi/) · [Overview](https://github.com/ladi-dataset/ladi-overview) |
 | **RescueNet** | 2023 | Real UAV | Classification, segmentation, VQA | 4,494 images | Damage, blocked roads, debris, water, vehicles | [Data](https://github.com/BinaLab/RescueNet-A-High-Resolution-Post-Disaster-UAV-Dataset-for-Semantic-Segmentation) · [Paper](https://www.nature.com/articles/s41597-023-02799-4) |
 | **FloodNet** | 2021 | Real UAV | Classification, segmentation, VQA | 2,343 images | Flooded/non-flooded infrastructure | [Data](https://github.com/BinaLab/FloodNet-Supervised_v1.0) · [Paper](https://arxiv.org/abs/2105.08655) |
 | **FLAME** | 2021 | Real UAV | Classification, segmentation | 47,992 labeled frames; 2,003 masks | Fire classification and pile-burn segmentation | [Project](https://github.com/AlirezaShamsoshoara/Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle) · [Data](https://doi.org/10.21227/7rk7-ey09) |
@@ -39,20 +40,29 @@ The **Scale** column reports released images, annotated frames, or videos when v
 
 | Dataset | Year | Source | Tasks | Scale | Main subjects | Resources |
 |---|---:|---|---|---|---|---|
+| **InsPLAD** | 2023 | Real UAV inspection | Detection, defect classification, anomaly detection | 10,607 Full-HD images; 28,933 asset instances | 17 power-line asset types and six defect types | [Project/data](https://andreluizbvs.github.io/InsPLAD/) · [Code](https://github.com/andreluizbvs/InsPLAD) · [Paper](https://arxiv.org/abs/2311.01619) |
+| **PLD-UAV (PLDU/PLDM)** | 2022 | Real UAV | Power-line segmentation | 11,210 images; 240,553 labeled line objects | Urban and mountain power lines with pixel-level masks | [Data/code](https://github.com/SnorkerHeng/PLD-UAV) |
 | **PTL-AI Furnas** | 2022 | Real inspection | Classification, fault recognition | 6,295 images | Power-line components and faults | [Data](https://github.com/freds0/PTL-AI_Furnas_Dataset) · [Paper](https://ieeexplore.ieee.org/document/9991806) |
+| **STN PLAD** | 2021 | Real UAV | Detection | 2,409 annotated objects | Towers, insulators, spacers, plates, and Stockbridge dampers | [Data/code](https://github.com/andreluizbvs/PLAD) · [Paper](https://doi.org/10.1109/SIBGRAPI54419.2021.00037) |
 | **TTPLA** | 2020 | Real aerial | Detection, semantic/instance segmentation | 1,100 original 4K images; 8,987 instances | Transmission towers and power lines | [Data](https://github.com/r3ab/ttpla_dataset) · [Paper](https://openaccess.thecvf.com/content/ACCV2020/html/Abdelfattah_TTPLA_An_Aerial-Image_Dataset_for_Detection_and_Segmentation_of_Transmission_ACCV_2020_paper.html) |
 
 ### 4. Human and Crowd Understanding
 
 | Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|---|
+| **HIT-UAV** | 2023 | Real UAV | Thermal person/vehicle detection | 2,898 thermal images; 24,899 instances | People and vehicles with altitude, view-angle, and daylight metadata | [Data/code](https://github.com/suojiashun/HIT-UAV-Infrared-Thermal-Dataset) |
 | **Manipal UAV Person** | 2023 | Real UAV | Detection | 33 videos; 13,462 images; 153,112 instances | Small persons under varied scale, pose, weather, and lighting | [Data](https://github.com/Akshathakrbhat/Manipal-UAV-Person-Dataset) · [Paper](https://doi.org/10.1016/j.isprsjprs.2022.11.022) |
+| **UAV-Human** | 2021 | Real UAV | Action recognition, pose, ReID, attribute recognition | 67,428 video clips; 119 subjects | Multimodal human behavior across locations, views, and illumination | [Data/code](https://github.com/SUTDCV/UAV-Human) · [Paper](https://openaccess.thecvf.com/content/CVPR2021/html/Li_UAV-Human_A_Large_Benchmark_for_Human_Behavior_Understanding_With_Unmanned_Aerial_CVPR_2021_paper.html) |
+| **DroneCrowd** | 2020 | Real UAV | Crowd counting | 112 video clips; 33,600 frames; 4.8M head annotations | Dense crowds across multiple locations and weather conditions | [Data/code](https://github.com/VisDrone/DroneCrowd) |
 | **Okutama-Action** | 2017 | Real UAV | Detection, action recognition | 43 min; 12 videos; 77,365 frames | Concurrent outdoor human actions | [Data](https://okutama-action.org/) · [Paper](https://openaccess.thecvf.com/content_cvpr_2017_workshops/w24/html/Barekatain_Okutama-Action_An_Aerial_CVPR_2017_paper.html) |
 
 ### 5. Transportation and Urban Monitoring
 
 | Dataset | Year | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|
+| **MiTra** | 2025 | Detection, tracking, trajectory analysis | Raw drone video + stitched trajectories; see release | Mixed traffic and lane-change behavior | [Paper/data](https://www.nature.com/articles/s41597-025-05472-0) |
+| **DRIFT** | 2025 | Multi-camera traffic analysis | Synchronized videos over nine intersections; see release | Network-level traffic trajectories at about 250 m altitude | [Paper](https://arxiv.org/abs/2504.11019) |
+| **UTUAV** | 2025 | Vehicle detection | — | Medellín urban traffic with a high proportion of motorcycles | [Paper](https://www.mdpi.com/2504-446X/10/1/15) |
 | **AU-AIR** | 2020 | Detection | 32,823 frames; 132,034 instances | Urban traffic + flight metadata | [Data](https://bozcani.github.io/auairdataset) · [Paper](https://doi.org/10.1109/ICRA40945.2020.9197293) |
 | **DroneVehicle** | 2020 | RGB–thermal detection | 56,878 images (28,439 pairs) | Vehicles with oriented boxes | [Data](https://github.com/VisDrone/DroneVehicle) · [Paper](https://arxiv.org/abs/2003.02437) |
 | **UAVDT** | 2018 | Detection, SOT, MOT | 100 sequences; ~80,000 frames; 800,000+ boxes | Vehicles under varied altitude, view, weather, lighting | [Archive](https://zenodo.org/records/14575517) · [Paper](https://openaccess.thecvf.com/content_ECCV_2018/html/Dawei_Du_The_Unmanned_Aerial_ECCV_2018_paper.html) |
@@ -62,6 +72,8 @@ The **Scale** column reports released images, annotated frames, or videos when v
 
 | Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|---|
+| **WAID** | 2023 | Real UAV | Wildlife detection | 14,375 images | Six wildlife species across varied habitats and conditions | [Data/code](https://github.com/xiaohuicui/WAID) · [Paper](https://www.mdpi.com/2076-3417/13/18/10397) |
+| **WildlifeMapper Dataset** | 2024 | Aerial/UAV | Multi-species detection and identification | 11,000 images; 28,000 annotations | African mammals and multi-species aerial surveys | [Data/code](https://github.com/UCSB-VRL/WildlifeMapper) |
 | **CART** | 2024 | Real UAV | RGB–thermal field robotics | Multiple synchronized flight sequences; see release | Rivers, lakes, coasts, deserts, forests | [Data](https://data.caltech.edu/records/cks6g-ps927) · [Code](https://github.com/aerorobotics/caltech-aerial-rgbt-dataset) · [Paper](https://arxiv.org/abs/2403.08997) |
 | **BIRDSAI** | 2020 | Real + synthetic | Detection, SOT, MOT | 48 real + 124 synthetic videos | Humans and animals in protected areas | [Data](https://sites.google.com/view/elizabethbondi/dataset) · [Paper](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
 
@@ -69,6 +81,8 @@ The **Scale** column reports released images, annotated frames, or videos when v
 
 | Dataset | Year | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|
+| **CODrone** | 2025 | Oriented object detection | — | Multi-scene UAV imagery designed for cross-domain robustness and practical OOD | [Data/code](https://github.com/AHideoKuzeA/CODrone-A-Comprehensive-Oriented-Object-Detection-benchmark-for-UAV) · [Paper](https://arxiv.org/abs/2504.20032) |
+| **WildUAV** | 2022 | Monocular depth estimation | 1,500+ high-resolution RGB images with reference depth and pose | Nadir and oblique outdoor aerial scenes | [Data/code](https://github.com/hrflr/wuav) · [Paper](https://doi.org/10.1109/LRA.2022.3154489) |
 | **UAVBench + UAVIT-1M (NWPU)** | 2026 | MLLM evaluation and instruction tuning | UAVBench: 966K samples / 43 test units; UAVIT-1M: 1.24M instructions over 789K real images | Image/region classification and captioning, VQA, detection, grounding, and other low-altitude vision-language tasks | [Project](https://uavbench.github.io/) · [Data](https://huggingface.co/datasets/ZhanYang-nwpu/UAVBench) · [Paper](https://arxiv.org/abs/2603.14336) |
 | **SpatialSky-Bench / SpatialSky-Dataset** | 2025 | VLM spatial reasoning and UAV navigation | SpatialSky-Dataset: 1M annotated samples; 13 benchmark subcategories | Environmental perception, distance/height, bounding boxes, landing safety, and scene understanding | [Code/data](https://github.com/linglingxiansen/SpatialSKy) · [Paper](https://arxiv.org/abs/2511.13269) |
 | **MM-UAVBench** | 2025 | MLLM perception, cognition, and planning | 1,549 video clips + 2,873 images; 19 tasks | Object/scene/event understanding and aerial/ground-agent planning | [Code/data](https://github.com/AI9Stars/MM-UAVBench) |
