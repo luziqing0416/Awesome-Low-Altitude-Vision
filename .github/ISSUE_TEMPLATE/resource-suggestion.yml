@@ -1,0 +1,76 @@
+name: Resource suggestion
+description: Suggest a dataset, paper, benchmark, codebase, survey, or tool
+title: "[Resource] "
+labels: []
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Resource type
+      options:
+        - Dataset
+        - Paper
+        - Benchmark
+        - Code or tool
+        - Survey or resource list
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name or title
+      placeholder: Official resource name or published paper title
+    validations:
+      required: true
+  - type: input
+    id: official
+    attributes:
+      label: Official URL
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper URL
+      placeholder: Publisher, CVF Open Access, arXiv, or author page
+  - type: input
+    id: code
+    attributes:
+      label: Code or project URL
+      placeholder: https://github.com/...
+  - type: input
+    id: venue
+    attributes:
+      label: Year and venue
+      placeholder: WACV 2022
+  - type: textarea
+    id: metadata
+    attributes:
+      label: Tasks, modality, scenes, and annotations
+      description: Describe what the resource contains and which tasks it supports.
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: License or access conditions
+      description: Include known restrictions or write "Unknown".
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Relevance to low-altitude vision
+      description: Briefly explain why this resource belongs in the repository.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched the repository and did not find a duplicate.
+          required: true
+        - label: The links point to official or author-maintained sources.
+          required: true
+        - label: I am not uploading copyrighted PDFs or restricted dataset files.
+          required: true
