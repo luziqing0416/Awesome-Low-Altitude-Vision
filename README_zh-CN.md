@@ -69,7 +69,7 @@
 
 | 数据集 | 年份 | 任务 | 数据规模 | 主要对象/场景 | 资源 |
 |---|---:|---|---|---|---|
-| **VisDrone** | 2018– | 目标检测、目标跟踪、人群计数 | 10,209张图像；288段视频/261,908帧；超过260万个标注框 | 城乡场景中的人员和车辆 | [数据](https://github.com/VisDrone/VisDrone-Dataset) · [论文](https://doi.org/10.1109/TPAMI.2021.3119563) |
+| **VisDrone** | 2018 | 目标检测、目标跟踪、人群计数 | 10,209张图像；288段视频/261,908帧；超过260万个标注框 | 城乡场景中的人员和车辆 | [数据](https://github.com/VisDrone/VisDrone-Dataset) · [论文](https://doi.org/10.1109/TPAMI.2021.3119563) |
 | **UAV123 / UAV20L** | 2016 | 单目标跟踪 | 123段序列；超过110,000帧 | 人员、车辆、船只等多类目标 | [项目](https://cemse.kaust.edu.sa/ivul/uav123) · [论文](https://arxiv.org/abs/1605.07109) |
 
 ### 8. 合成无人机数据集
@@ -81,7 +81,7 @@
 | **C2A** | 2024 | 灾害背景与人体组合 | 搜索与救援 | 10,215张图像；超过360,000个人体实例 | 灾害场景人员检测与姿态多样性 | [数据/代码](https://github.com/Ragib-Amin-Nihal/C2A) · [论文](https://arxiv.org/abs/2408.04922) |
 | **Synthetic SeaDronesSee** | — | 海上场景仿真/渲染 | 搜索与救援 | 随版本变化 | 目标检测, augmentation, sim-to-real | [官方发布](https://seadronessee.cs.uni-tuebingen.de/dataset) |
 | **BIRDSAI Synthetic** | 2020 | AirSim-W热红外仿真 | 生态监测 | 124段合成视频 | 热红外检测、跟踪与域适配 | [数据](https://sites.google.com/view/elizabethbondi/dataset) · [论文](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_目标检测_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
-| **VictimDet composites** | 2022 | 和谐化受害者合成图像 | 搜索与救援 | 详见项目发布 | 用于训练灾害受害者检测器 | [数据/代码](https://github.com/noahzn/VictimDet) |
+| **VictimDet composites** | 2022 | 通过图像和谐化管线制作的预生成组合图像 | 搜索与救援 | — | 提供可直接下载的受害者组合图像；项目代码可用于复现或扩展生成流程 | [数据/代码](https://github.com/noahzn/VictimDet) |
 
 ## 研究论文
 
