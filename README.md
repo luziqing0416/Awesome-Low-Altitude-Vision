@@ -4,7 +4,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0--1.0-lightgrey.svg)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-This repository includes only onboard UAV perception: the camera or sensor must be carried by the UAV and observe people, objects, infrastructure, terrain, or water below/around it. Ground-based or external-camera datasets that detect or track UAVs in the sky are excluded.
+This repository covers low-altitude onboard aerial perception. Cameras or sensors may be carried by UAVs, helicopters, or other low-altitude aircraft and should observe people, objects, infrastructure, terrain, or water below/around the platform. Datasets in which UAVs themselves are the detection or tracking targets—such as anti-UAV surveillance recorded from the ground or another external platform—are excluded.
 
 Low-altitude UAV vision differs from satellite and ground-level vision in viewpoint, target scale, camera motion, background, and operational constraints. This list prioritizes search and rescue, disaster monitoring, and infrastructure inspection while retaining other domains that may offer transferable insights.
 
@@ -33,6 +33,7 @@ The **Scale** column reports released images, annotated frames, or videos when v
 
 | Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|---|
+| **LADI** | 2023 | Real low-altitude aircraft/UAV | Multi-label disaster classification | — | Oblique disaster-response imagery collected during events from 2015–2023 | [Data](https://registry.opendata.aws/ladi/) · [Overview](https://github.com/ladi-dataset/ladi-overview) |
 | **RescueNet** | 2023 | Real UAV | Classification, segmentation, VQA | 4,494 images | Damage, blocked roads, debris, water, vehicles | [Data](https://github.com/BinaLab/RescueNet-A-High-Resolution-Post-Disaster-UAV-Dataset-for-Semantic-Segmentation) · [Paper](https://www.nature.com/articles/s41597-023-02799-4) |
 | **FloodNet** | 2021 | Real UAV | Classification, segmentation, VQA | 2,343 images | Flooded/non-flooded infrastructure | [Data](https://github.com/BinaLab/FloodNet-Supervised_v1.0) · [Paper](https://arxiv.org/abs/2105.08655) |
 | **FLAME** | 2021 | Real UAV | Classification, segmentation | 47,992 labeled frames; 2,003 masks | Fire classification and pile-burn segmentation | [Project](https://github.com/AlirezaShamsoshoara/Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle) · [Data](https://doi.org/10.21227/7rk7-ey09) |
@@ -73,6 +74,7 @@ The **Scale** column reports released images, annotated frames, or videos when v
 
 | Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|---|
+| **WildlifeMapper Dataset** | 2024 | Low-altitude aerial/UAV | Multi-species detection and identification | 11,000 images; 28,000 annotations | African mammals and multi-species aerial surveys | [Data/code](https://github.com/UCSB-VRL/WildlifeMapper) |
 | **WAID** | 2023 | Real UAV | Wildlife detection | 14,375 images | Six wildlife species across varied habitats and conditions | [Data/code](https://github.com/xiaohuicui/WAID) · [Paper](https://www.mdpi.com/2076-3417/13/18/10397) |
 | **CART** | 2024 | Real UAV | RGB–thermal field robotics | Multiple synchronized flight sequences; see release | Rivers, lakes, coasts, deserts, forests | [Data](https://data.caltech.edu/records/cks6g-ps927) · [Code](https://github.com/aerorobotics/caltech-aerial-rgbt-dataset) · [Paper](https://arxiv.org/abs/2403.08997) |
 | **BIRDSAI** | 2020 | Real + synthetic | Detection, SOT, MOT | 48 real + 124 synthetic videos | Humans and animals in protected areas | [Data](https://sites.google.com/view/elizabethbondi/dataset) · [Paper](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
