@@ -69,6 +69,9 @@
 
 | 数据集 | 年份 | 任务 | 数据规模 | 主要对象/场景 | 资源 |
 |---|---:|---|---|---|---|
+| **UAVBench + UAVIT-1M（西工大）** | 2026 | 多模态大模型评测与指令微调 | UAVBench：96.6万条样本/43个测试单元；UAVIT-1M：基于78.9万张真实图像的124万条指令 | 图像/区域分类与描述、视觉问答、检测、视觉定位等低空视觉—语言任务 | [项目](https://uavbench.github.io/) · [数据](https://huggingface.co/datasets/ZhanYang-nwpu/UAVBench) · [论文](https://arxiv.org/abs/2603.14336) |
+| **SpatialSky-Bench / SpatialSky-Dataset** | 2025 | 视觉语言模型空间推理与无人机导航 | SpatialSky-Dataset含100万条标注样本；基准包含13个子类别 | 环境感知、距离与高度、边界框、着陆安全和场景理解 | [代码/数据](https://github.com/linglingxiansen/SpatialSKy) · [论文](https://arxiv.org/abs/2511.13269) |
+| **MM-UAVBench** | 2025 | 多模态大模型感知、认知与规划 | 1,549段视频片段＋2,873张图像；19项任务 | 目标/场景/事件理解，以及空中与地面智能体协同规划 | [代码/数据](https://github.com/AI9Stars/MM-UAVBench) |
 | **VisDrone** | 2018 | 目标检测、目标跟踪、人群计数 | 10,209张图像；288段视频/261,908帧；超过260万个标注框 | 城乡场景中的人员和车辆 | [数据](https://github.com/VisDrone/VisDrone-Dataset) · [论文](https://doi.org/10.1109/TPAMI.2021.3119563) |
 | **UAV123 / UAV20L** | 2016 | 单目标跟踪 | 123段序列；超过110,000帧 | 人员、车辆、船只等多类目标 | [项目](https://cemse.kaust.edu.sa/ivul/uav123) · [论文](https://arxiv.org/abs/1605.07109) |
 
@@ -78,6 +81,7 @@
 
 | 数据集 | 年份 | 生成方式/来源 | 应用场景 | 数据规模 | 主要用途 | 资源 |
 |---|---:|---|---|---|---|---|
+| **UAVBench（UAEU/Khalifa）** | 2025 | LLM生成的结构化飞行场景与选择题 | 无人机智能体推理 | 50,000条经过验证的JSON场景＋50,000道选择题 | 用于任务规划、风险、导航、伦理、资源约束和多智能体推理；属于文本/结构化数据，而非视觉图像数据集 | [数据/代码](https://github.com/maferrag/UAVBench) · [论文](https://arxiv.org/abs/2511.11252) |
 | **C2A** | 2024 | 灾害背景与人体组合 | 搜索与救援 | 10,215张图像；超过360,000个人体实例 | 灾害场景人员检测与姿态多样性 | [数据/代码](https://github.com/Ragib-Amin-Nihal/C2A) · [论文](https://arxiv.org/abs/2408.04922) |
 | **Synthetic SeaDronesSee** | — | 海上场景仿真/渲染 | 搜索与救援 | 随版本变化 | 目标检测, augmentation, sim-to-real | [官方发布](https://seadronessee.cs.uni-tuebingen.de/dataset) |
 | **BIRDSAI Synthetic** | 2020 | AirSim-W热红外仿真 | 生态监测 | 124段合成视频 | 热红外检测、跟踪与域适配 | [数据](https://sites.google.com/view/elizabethbondi/dataset) · [论文](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_目标检测_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
