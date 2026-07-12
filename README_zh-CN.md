@@ -81,7 +81,7 @@
 | **C2A** | 2024 | 灾害背景与人体组合 | 搜索与救援 | 10,215张图像；超过360,000个人体实例 | 灾害场景人员检测与姿态多样性 | [数据/代码](https://github.com/Ragib-Amin-Nihal/C2A) · [论文](https://arxiv.org/abs/2408.04922) |
 | **Synthetic SeaDronesSee** | — | 海上场景仿真/渲染 | 搜索与救援 | 随版本变化 | 目标检测, augmentation, sim-to-real | [官方发布](https://seadronessee.cs.uni-tuebingen.de/dataset) |
 | **BIRDSAI Synthetic** | 2020 | AirSim-W热红外仿真 | 生态监测 | 124段合成视频 | 热红外检测、跟踪与域适配 | [数据](https://sites.google.com/view/elizabethbondi/dataset) · [论文](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_目标检测_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
-| **VictimDet composites** | 2022 | 通过图像和谐化管线制作的预生成组合图像 | 搜索与救援 | — | 提供可直接下载的受害者组合图像；项目代码可用于复现或扩展生成流程 | [数据/代码](https://github.com/noahzn/VictimDet) |
+| **VictimDet composites** | 2022 | 通过图像和谐化管线制作的预生成组合图像 | 搜索与救援 | 1,936张图像（512×512），含人体部位边界框 | 用于微调灾害受害者检测器；提供可下载数据和代码，可复现或扩展生成流程 | [数据/代码](https://github.com/noahzn/VictimDet) |
 
 ## 研究论文
 
