@@ -12,7 +12,7 @@ Low-altitude UAV vision differs from satellite and ground-level vision in viewpo
 
 ## Contents
 
-- [Datasets](#datasets): [SAR](#1-search-and-rescue) · [Disaster](#2-disaster-monitoring-and-assessment) · [Inspection](#3-infrastructure-inspection) · [Human](#4-human-and-crowd-understanding) · [Transportation](#5-transportation-and-urban-monitoring) · [Agriculture & Ecology](#6-agriculture-forestry-and-ecological-monitoring) · [General Benchmarks](#7-general-uav-vision-benchmarks) · [Synthetic](#8-synthetic-uav-datasets)
+- [Datasets](#datasets): [SAR](#1-search-and-rescue) · [Disaster](#2-disaster-monitoring-and-assessment) · [Inspection](#3-infrastructure-inspection) · [Human](#4-human-and-crowd-understanding) · [Transportation](#5-transportation-and-urban-monitoring) · [Agriculture & Ecology](#6-agriculture-forestry-and-ecological-monitoring) · [Thermal & Multimodal](#7-thermal-and-multimodal-perception) · [Multi-Drone](#8-multi-drone-collaborative-perception) · [Embodied AI & VLN](#9-embodied-ai-and-vision-language-navigation) · [General Benchmarks](#10-general-uav-vision-benchmarks) · [Synthetic](#11-synthetic-uav-datasets)
 - [Research Papers](#research-papers)
 - [Tools and Resources](#tools-and-resources)
 
@@ -37,6 +37,9 @@ The **Scale** column reports released images, annotated frames, or videos when v
 | **RescueNet** | 2023 | Real UAV | Classification, segmentation, VQA | 4,494 images | Damage, blocked roads, debris, water, vehicles | [Data](https://github.com/BinaLab/RescueNet-A-High-Resolution-Post-Disaster-UAV-Dataset-for-Semantic-Segmentation) · [Paper](https://www.nature.com/articles/s41597-023-02799-4) |
 | **FloodNet** | 2021 | Real UAV | Classification, segmentation, VQA | 2,343 images | Flooded/non-flooded infrastructure | [Data](https://github.com/BinaLab/FloodNet-Supervised_v1.0) · [Paper](https://arxiv.org/abs/2105.08655) |
 | **FLAME** | 2021 | Real UAV | Classification, segmentation | 47,992 labeled frames; 2,003 masks | Fire classification and pile-burn segmentation | [Project](https://github.com/AlirezaShamsoshoara/Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle) · [Data](https://doi.org/10.21227/7rk7-ey09) |
+| **FIReStereo** | 2024 | Real UAV | Depth perception, detection | 204,594 stereo IR pairs | Fire and smoke scenes with binocular thermal-infrared and RGB for emergency response | Check · CMU fire-scene UAV stereo dataset |
+| **HazyDet** | 2024 | Real UAV + synthetic haze | Detection | See release | Drone-view object detection across multiple haze concentrations with depth cues | [Data/code](https://github.com/GrokCV/HazyDet) · [Paper](https://arxiv.org/abs/2409.19833) |
+| **UAV-AWID** | 2024 | Real UAV | Detection | See release | Adverse weather and image degradation (rain, motion blur, noise) at multiple severity levels | [Data/code](https://github.com/AdnanMunir338/UAV-AWID) |
 
 ### 3. Infrastructure Inspection
 
@@ -65,8 +68,10 @@ The **Scale** column reports released images, annotated frames, or videos when v
 | **MiTra** | 2025 | Detection, tracking, trajectory analysis | Raw drone video + stitched trajectories; see release | Mixed traffic and lane-change behavior | [Paper/data](https://www.nature.com/articles/s41597-025-05472-0) |
 | **DRIFT** | 2025 | Multi-camera traffic analysis | Synchronized videos over nine intersections; see release | Network-level traffic trajectories at about 250 m altitude | [Paper](https://arxiv.org/abs/2504.11019) |
 | **UTUAV** | 2025 | Vehicle detection | — | Medellín urban traffic with a high proportion of motorcycles | [Paper](https://www.mdpi.com/2504-446X/10/1/15) |
+| **VDD (Varied Drone Dataset)** | 2025 | Semantic segmentation | 400 pixel-level annotated high-resolution images | Urban, industrial, rural, and natural scenes with 7 semantic classes across varied camera angles and lighting | [Data/code](https://github.com/RussRobin/VDD) · [Paper](https://arxiv.org/abs/2305.13608) |
 | **AU-AIR** | 2020 | Detection | 32,823 frames; 132,034 instances | Urban traffic + flight metadata | [Data](https://bozcani.github.io/auairdataset) · [Paper](https://doi.org/10.1109/ICRA40945.2020.9197293) |
 | **DroneVehicle** | 2020 | RGB–thermal detection | 56,878 images (28,439 pairs) | Vehicles with oriented boxes | [Data](https://github.com/VisDrone/DroneVehicle) · [Paper](https://arxiv.org/abs/2003.02437) |
+| **SDD (Stanford Drone Dataset)** | 2016 | Detection, tracking, trajectory prediction | Top-down campus video; see release | Dense pedestrian and vehicle trajectories in a university campus | [Data](https://cvgl.stanford.edu/projects/uav_data/) · [Paper](https://cvgl.stanford.edu/papers/eccv16_robicquet.pdf) |
 | **UAVDT** | 2018 | Detection, SOT, MOT | 100 sequences; ~80,000 frames; 800,000+ boxes | Vehicles under varied altitude, view, weather, lighting | [Archive](https://zenodo.org/records/14575517) · [Paper](https://openaccess.thecvf.com/content_ECCV_2018/html/Dawei_Du_The_Unmanned_Aerial_ECCV_2018_paper.html) |
 | **UAVid** | 2018 | Semantic segmentation | 30 sequences; 300 annotated frames | Roads, buildings, vegetation, vehicles, people | [Data](https://uavid.nl/) · [Paper](https://arxiv.org/abs/1810.10438) |
 
@@ -79,7 +84,40 @@ The **Scale** column reports released images, annotated frames, or videos when v
 | **CART** | 2024 | Real UAV | RGB–thermal field robotics | Multiple synchronized flight sequences; see release | Rivers, lakes, coasts, deserts, forests | [Data](https://data.caltech.edu/records/cks6g-ps927) · [Code](https://github.com/aerorobotics/caltech-aerial-rgbt-dataset) · [Paper](https://arxiv.org/abs/2403.08997) |
 | **BIRDSAI** | 2020 | Real + synthetic | Detection, SOT, MOT | 48 real + 124 synthetic videos | Humans and animals in protected areas | [Data](https://sites.google.com/view/elizabethbondi/dataset) · [Paper](https://openaccess.thecvf.com/content_WACV_2020/html/Bondi_BIRDSAI_A_Dataset_for_Detection_and_Tracking_in_Aerial_Thermal_Infrared_WACV_2020_paper.html) |
 
-### 7. General UAV Vision Benchmarks
+### 7. Thermal and Multimodal Perception
+
+| Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
+|---|---:|---|---|---|---|---|
+| **HiAI** | 2025 | Real high-altitude UAV | RGB–T tracking | 150 aligned RGB-IR video pairs | Diverse scenes for high-altitude infrared-visible UAV tracking | Check · High-altitude RGB-infrared tracking benchmark |
+| **RTDOD** | 2023 | Real UAV | RGB–thermal domain-incremental detection | See release | UAV-view ground objects under domain-incremental settings | [Data/code](https://github.com/fenght96/RTDOD) · [Paper](https://www.sciencedirect.com/science/article/pii/S0262885623002097) |
+| **DroneRGBT** | 2020 | Real UAV | RGB–T crowd counting | 3,600 aligned RGB-thermal pairs | Crowd counting from drone perspective across modalities | [Data/code](https://github.com/VisDrone/DroneRGBT) |
+| **Salient Map Thermal Dataset** | 2020 | Real UAV | Thermal salient object detection | 2,975 annotated images | Day/night urban scenes for UAV thermal saliency | Check · Google Drive dataset for thermal saliency |
+| **ASL-TID** | 2014 | Airborne (helicopter/UAV) | Thermal tracking | See release | People and vehicles from a moving airborne thermal-infrared camera | [Data](https://projects.asl.ethz.ch/datasets/doku.php?id=ir_dataset) |
+
+### 8. Multi-Drone Collaborative Perception
+
+| Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
+|---|---:|---|---|---|---|---|
+| **UAV3D** | 2024 | Synthetic (Carla) | 3D detection, tracking | Large-scale benchmark | 3D object detection and tracking for single and multi-UAV cooperation | [Data/code](https://github.com/huiyegit/UAV3D) · NeurIPS 2024 |
+| **Air-Co-Pred / AirCopBench** | 2023 | Synthetic | Cooperative trajectory prediction | See release | Multi-UAV cooperative perception and trajectory prediction | Check · Embodied City benchmark |
+| **MAVREC** | 2023 | Real UAV + ground | Recognition | 500K+ frames; 1.1M boxes | Multi-view aerial recognition combining drone and ground cameras | Check · Multi-view recognition dataset |
+| **CoPerception-UAVs** | 2022 | Synthetic | Collaborative 2D/3D detection | 5 UAVs; see release | Collaborative perception supporting 2D/3D detection and BEV segmentation | [Project](https://siheng-chen.github.io/dataset/coperception-uav/) |
+| **MDMT** | 2022 | Real UAV | Multi-drone MOT | 88 dual-view videos; 39,678 frames | Pedestrians, bicycles, and vehicles from synchronized dual-drone viewpoints | [Data/code](https://github.com/VisDrone/Multi-Drone-Multi-Object-Detection-and-Tracking) |
+| **MDOT** | 2020 | Real UAV | Multi-drone SOT | See release | First multi-drone single-object tracking benchmark across 10 attributes | Check · Multi-drone collaborative tracking |
+
+### 9. Embodied AI and Vision-Language Navigation
+
+| Dataset | Year | Source | Tasks | Scale | Main subjects / scenes | Resources |
+|---|---:|---|---|---|---|---|
+| **AeroVerse** | 2024 | Synthetic | VLN, VQA, multi-task | Large-scale benchmark | UAV embodied agent benchmark suite with first-person aerial data across five tasks | [Paper](https://arxiv.org/abs/2408.15511) |
+| **CityNav** | 2024 | Synthetic (real-city 3D) | VLN | 32,000+ instructions | Language-guided UAV navigation over real city 3D point clouds with human demonstrations | [Project](https://water-cookie.github.io/city-nav-proj/) · [Paper](https://arxiv.org/abs/2406.14240) |
+| **OpenUAV** | 2024 | Synthetic | VLN | 12,000 trajectory-instruction pairs | Photorealistic UAV VLN with 6-DoF flight dynamics | Check · Photorealistic VLN platform |
+| **UAV-VisLoc** | 2024 | Real UAV + satellite | Visual localization | 6,742 UAV images; 11 locations | Cross-view UAV-to-satellite geo-localization in GNSS-denied environments | [Data/code](https://github.com/intellisensing/uav-visloc) · [Paper](https://arxiv.org/abs/2405.11936) |
+| **AerialVLN** | 2023 | Synthetic (UE4) | VLN | 8,446 paths; 25 city scenes | First UAV vision-language navigation benchmark | [Data/code](https://github.com/AirVLN/AirVLN) · [Paper](https://openaccess.thecvf.com/content/ICCV2023/papers/Liu_AerialVLN_Vision-and-Language_Navigation_for_UAVs_ICCV_2023_paper.pdf) |
+| **UrbanBIS** | 2023 | Real UAV oblique photography | 3D semantic/instance segmentation | 2.5 billion points; 6 cities | Large-scale urban building instance segmentation from UAV oblique imagery | [Project](https://vcc.tech/UrbanBIS) · [Paper](https://arxiv.org/abs/2305.02627) |
+| **AVDN** | 2022 | Synthetic (AirSim) | Vision-and-dialog navigation | 3,064 trajectories | Dialog-based aerial vision-language navigation with multi-turn interactions | Check · CMU aerial dialog navigation dataset |
+
+### 10. General UAV Vision Benchmarks
 
 | Dataset | Year | Tasks | Scale | Main subjects / scenes | Resources |
 |---|---:|---|---|---|---|
@@ -91,12 +129,15 @@ The **Scale** column reports released images, annotated frames, or videos when v
 | **VisDrone** | 2018 | Detection, tracking, crowd counting | 10,209 images; 288 clips / 261,908 frames; 2.6M+ boxes | People and vehicles in urban/rural scenes | [Data](https://github.com/VisDrone/VisDrone-Dataset) · [Paper](https://doi.org/10.1109/TPAMI.2021.3119563) |
 | **UAV123 / UAV20L** | 2016 | SOT | 123 sequences; 110,000+ frames | People, vehicles, boats, other targets | [Project](https://cemse.kaust.edu.sa/ivul/uav123) · [Paper](https://arxiv.org/abs/1605.07109) |
 
-### 8. Synthetic UAV Datasets
+### 11. Synthetic UAV Datasets
 
 A cross-cutting index: synthetic datasets may also appear under their primary application category.
 
 | Dataset | Year | Generation/source | Application | Scale | Intended use | Resources |
 |---|---:|---|---|---|---|---|
+| **UEMM-Air** | 2024 | UE+AirSim synthetic | Multi-modal perception | 120K+ sequences; six paired modalities | Detection, segmentation, retrieval, and cross-modal understanding | [Data/code](https://github.com/1e12Leon/UEMM-Air) · [Paper](https://arxiv.org/abs/2406.06230) |
+| **SkyScenes** | 2024 | Synthetic | City-scale perception | See release | Urban aerial multi-modal perception and segmentation | Check · Synthetic city-scale aerial benchmark |
+| **SynDrone** | 2023 | Unreal Engine synthetic | Urban scene understanding | 72,000 frames; multi-modal | Multi-modal (RGB, depth, LiDAR) urban UAV segmentation | Check · UE synthetic multi-modal data |
 | **UAVBench (UAEU/Khalifa)** | 2025 | LLM-generated structured flight scenarios and MCQs | Agentic UAV reasoning | 50,000 validated JSON scenarios + 50,000 multiple-choice questions | Mission planning, risk, navigation, ethics, resource constraints, and multi-agent reasoning; text/structured data rather than a vision dataset | [Data/code](https://github.com/maferrag/UAVBench) · [Paper](https://arxiv.org/abs/2511.11252) |
 | **C2A** | 2024 | Composited humans + disaster backgrounds | SAR | 10,215 images; 360,000+ instances | Disaster human detection and pose diversity | [Data/code](https://github.com/Ragib-Amin-Nihal/C2A) · [Paper](https://arxiv.org/abs/2408.04922) |
 | **Synthetic SeaDronesSee** | — | Pre-generated maritime synthetic data produced with a generation tool | SAR | — | Downloadable synthetic training data for maritime detection, augmentation, and sim-to-real research | [Official release](https://seadronessee.cs.uni-tuebingen.de/dataset) |
@@ -119,6 +160,7 @@ Detection, tracking, video understanding, segmentation, action recognition, and 
 | 2025 | PointSR: Self-Regularized Point Supervision for Drone-View Object Detection | CVPR | Detection, point supervision, pseudo boxes | [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Li_PointSR_Self-Regularized_Point_Supervision_for_Drone-View_Object_Detection_CVPR_2025_paper.html) |
 | 2025 | Learning Occlusion-Robust Vision Transformers for Real-Time UAV Tracking | CVPR | Tracking, occlusion, real time | [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Learning_Occlusion-Robust_Vision_Transformers_for_Real-Time_UAV_Tracking_CVPR_2025_paper.html) |
 | 2025 | Similarity-Guided Layer-Adaptive Vision Transformer for UAV Tracking | CVPR | Tracking, lightweight ViT | [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Xue_Similarity-Guided_Layer-Adaptive_Vision_Transformer_for_UAV_Tracking_CVPR_2025_paper.html) |
+| 2024 | HazyDet: Open-Source Benchmark for Drone-View Object Detection with Depth-Cues in Hazy Scenes | arXiv | Detection, haze, adverse weather | [Paper](https://arxiv.org/abs/2409.19833) · [Code](https://github.com/GrokCV/HazyDet) |
 | 2023 | Adaptive Sparse Convolutional Networks with Global Context Enhancement for Faster Object Detection on Drone Images | CVPR | Detection, sparse convolution, onboard efficiency | [Paper](https://openaccess.thecvf.com/content/CVPR2023/html/Du_Adaptive_Sparse_Convolutional_Networks_With_Global_Context_Enhancement_for_Faster_CVPR_2023_paper.html) |
 | 2019 | Delving into Robust Object Detection from Unmanned Aerial Vehicles: A Deep Nuisance Disentanglement Approach | ICCV | Detection, robustness, nuisance disentanglement | [Paper](https://openaccess.thecvf.com/content_ICCV_2019/html/Wu_Delving_Into_Robust_Object_Detection_From_Unmanned_Aerial_Vehicles_A_ICCV_2019_paper.html) |
 
@@ -141,13 +183,15 @@ Simulation, generation, augmentation, annotation, filtering, and quality evaluat
 
 ### 4. Vision-Language Models, Agents, and Surveys
 
-VLM-assisted annotation, prompt/scene planning, agentic loops, surveys, and comparative benchmarks.
+VLM-assisted annotation, prompt/scene planning, agentic loops, vision-language navigation, surveys, and comparative benchmarks.
 
 | Year | Paper | Venue | Tags | Resources |
 |---:|---|---|---|---|
 | 2025 | Where Does It Exist from the Low-Altitude: Spatial Aerial Video Grounding | NeurIPS | Vision-language grounding, aerial video, small objects | [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/76c5401551bbe8337dc38a2bd5eb394e-Abstract-Conference.html) |
 | 2025 | Embodied Crowd Counting | NeurIPS | Embodied perception, MLLM, active UAV observation | [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/6aa3267e3a0f7c2c718036d08d482a51-Abstract-Conference.html) |
 | 2024 | Recent Advances for Aerial Object Detection: A Survey | ACM Computing Surveys | Survey, detection, aerial vision | [Paper](https://dl.acm.org/doi/10.1145/3664598) |
+| 2023 | AerialVLN: Vision-and-Language Navigation for UAVs | ICCV | Vision-language navigation, UAV, embodied AI | [Paper](https://openaccess.thecvf.com/content/ICCV2023/papers/Liu_AerialVLN_Vision-and-Language_Navigation_for_UAVs_ICCV_2023_paper.pdf) · [Dataset](https://github.com/AirVLN/AirVLN) |
+| 2024 | UAV3D: A Large-scale 3D Perception Benchmark for Unmanned Aerial Vehicles | NeurIPS | 3D perception, multi-UAV cooperation | [Code](https://github.com/huiyegit/UAV3D) |
 
 ### 5. Low-Altitude Application Systems
 
